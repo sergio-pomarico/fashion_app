@@ -14,6 +14,9 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		85FE57E3F1C3EB3D432284E7 /* libPods-fashion_app-fashion_appTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 220359C8D0A3E2EE626779A4 /* libPods-fashion_app-fashion_appTests.a */; };
+		9F8891812673B1F1007DA673 /* SFPro-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9F88917C2673AD1F007DA673 /* SFPro-Bold.ttf */; };
+		9F8891822673B1F1007DA673 /* SFPro-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9F88917B2673AD1F007DA673 /* SFPro-Regular.ttf */; };
+		9F8891832673B1F1007DA673 /* SFPro-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9F88917D2673AD1F007DA673 /* SFPro-Semibold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +45,9 @@
 		5807EE9F81D69FC77CC1BE4D /* Pods-fashion_app-fashion_appTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fashion_app-fashion_appTests.release.xcconfig"; path = "Target Support Files/Pods-fashion_app-fashion_appTests/Pods-fashion_app-fashion_appTests.release.xcconfig"; sourceTree = "<group>"; };
 		6E47E819D10D8CA81AC57F56 /* Pods-fashion_app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fashion_app.debug.xcconfig"; path = "Target Support Files/Pods-fashion_app/Pods-fashion_app.debug.xcconfig"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = fashion_app/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9F88917B2673AD1F007DA673 /* SFPro-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SFPro-Regular.ttf"; path = "../assets/fonts/SFPro-Regular.ttf"; sourceTree = "<group>"; };
+		9F88917C2673AD1F007DA673 /* SFPro-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SFPro-Bold.ttf"; path = "../assets/fonts/SFPro-Bold.ttf"; sourceTree = "<group>"; };
+		9F88917D2673AD1F007DA673 /* SFPro-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SFPro-Semibold.ttf"; path = "../assets/fonts/SFPro-Semibold.ttf"; sourceTree = "<group>"; };
 		B76B5F3C996BA89DFB3CC1C2 /* Pods-fashion_app-fashion_appTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fashion_app-fashion_appTests.debug.xcconfig"; path = "Target Support Files/Pods-fashion_app-fashion_appTests/Pods-fashion_app-fashion_appTests.debug.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -122,6 +128,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				F15AAEC4C96EF57594DF570A /* Pods */,
+				9D80722C94474B2688A016AA /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -137,6 +144,16 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		9D80722C94474B2688A016AA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9F88917C2673AD1F007DA673 /* SFPro-Bold.ttf */,
+				9F88917B2673AD1F007DA673 /* SFPro-Regular.ttf */,
+				9F88917D2673AD1F007DA673 /* SFPro-Semibold.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		F15AAEC4C96EF57594DF570A /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -145,7 +162,6 @@
 				B76B5F3C996BA89DFB3CC1C2 /* Pods-fashion_app-fashion_appTests.debug.xcconfig */,
 				5807EE9F81D69FC77CC1BE4D /* Pods-fashion_app-fashion_appTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -243,6 +259,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F8891812673B1F1007DA673 /* SFPro-Bold.ttf in Resources */,
+				9F8891822673B1F1007DA673 /* SFPro-Regular.ttf in Resources */,
+				9F8891832673B1F1007DA673 /* SFPro-Semibold.ttf in Resources */,
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 			);
