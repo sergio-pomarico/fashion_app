@@ -16,7 +16,7 @@
 		85FE57E3F1C3EB3D432284E7 /* libPods-fashion_app-fashion_appTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 220359C8D0A3E2EE626779A4 /* libPods-fashion_app-fashion_appTests.a */; };
 		9F05E2E02675208D00B19E51 /* SFProDisplay-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1CF5E377E7EC4F558CEF8CA8 /* SFProDisplay-Bold.ttf */; };
 		9F05E2E12675209200B19E51 /* SFProDisplay-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DF23A07106D446BABFEF7138 /* SFProDisplay-Regular.ttf */; };
-		9F05E2E22675209700B19E51 /* SFProDisplay-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C205CB7522264003BF807F70 /* SFPro-Semibold.ttf */; };
+		9F05E2E22675209700B19E51 /* SFProDisplay-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C205CB7522264003BF807F70 /* SFProDisplay-Semibold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -259,9 +259,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9F05E2E22675209700B19E51 /* SFPro-Semibold.ttf in Resources */,
-				9F05E2E12675209200B19E51 /* SFPro-Regular.ttf in Resources */,
-				9F05E2E02675208D00B19E51 /* SFPro-Bold.ttf in Resources */,
+				9F05E2E22675209700B19E51 /* SFProDisplay-Semibold.ttf in Resources */,
+				9F05E2E12675209200B19E51 /* SFProDisplay-Regular.ttf in Resources */,
+				9F05E2E02675208D00B19E51 /* SFProDisplay-Bold.ttf in Resources */,
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 			);
