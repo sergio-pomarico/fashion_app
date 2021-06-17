@@ -1,7 +1,7 @@
 import React from 'react';
 
 import {StyleSheet, Text, View} from 'react-native';
-import {Button} from '../../components/';
+import {Button} from '../../../components';
 
 interface SubslideProps {
   subtitle: string;
