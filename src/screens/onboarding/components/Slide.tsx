@@ -1,6 +1,7 @@
 import React from 'react';
 
-import {Dimensions, StyleSheet, Text, View} from 'react-native';
+import {Dimensions, StyleSheet, View} from 'react-native';
+import {Text} from '../../../components/';
 const {width, height} = Dimensions.get('screen');
 
 export const SLIDE_HEIGHT = 0.61 * height;
@@ -19,7 +20,7 @@ const Slide = ({title = '', right}: SlideProps) => {
   return (
     <View style={styles.container}>
       <View style={[styles.titleContainer, {transform}]}>
-        <Text style={styles.title}>{title}</Text>
+        <Text variant="hero">{title}</Text>
       </View>
     </View>
   );
