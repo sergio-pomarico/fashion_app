@@ -36,7 +36,7 @@
 		</dict>
 	</dict>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string></string>
+	<string/>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIRequiredDeviceCapabilities</key>
@@ -56,6 +56,7 @@
 		<string>SFProDisplay-Regular.ttf</string>
 		<string>SFProDisplay-Semibold.ttf</string>
 		<string>SFProDisplay-Bold.ttf</string>
+		<string>SFProDisplay-Medium.ttf</string>
 	</array>
 </dict>
 </plist>
