@@ -44,6 +44,11 @@ const theme: BaseTheme = createTheme({
       fontSize: 16,
       lineHeight: 30,
     },
+    button: {
+      fontFamily: 'SFProDisplay-Medium',
+      textAlign: 'center',
+      fontSize: 16,
+    },
   },
 });
 
