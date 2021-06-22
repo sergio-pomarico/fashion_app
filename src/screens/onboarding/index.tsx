@@ -2,12 +2,13 @@ import React, {useRef, useState} from 'react';
 
 import {Dimensions, StyleSheet, View} from 'react-native';
 import Animated, {interpolateColor, multiply} from 'react-native-reanimated';
+import theme from '../../config/theme';
+import {Route, StackNavigationProps} from '../../core/types';
 import Dot from './components/Dot';
 import Slide, {SLIDE_HEIGHT} from './components/Slide';
 import Subslide from './components/Subslide';
 
 const {width} = Dimensions.get('screen');
-const BORDER_RADIUS = 75;
 const SLIDES = [
   {
     title: 'Relaxed',
@@ -39,7 +40,9 @@ const SLIDES = [
   },
 ];
 
-const OnboardingScreen: React.FC<{}> = () => {
+const OnboardingScreen = ({
+  navigation,
+}: StackNavigationProps<Route, 'Onboarding'>) => {
   const [scrollX, setScrollX] = useState(0);
 
   const bgColor = interpolateColor(
@@ -93,20 +96,24 @@ const OnboardingScreen: React.FC<{}> = () => {
                 ],
               },
             ]}>
-            {SLIDES.map(({subtitle, description}, index) => (
-              <Subslide
-                {...{subtitle, description}}
-                key={index}
-                last={index === SLIDES.length - 1}
-                onPress={() => {
-                  if (scroll.current) {
-                    scroll.current
-                      .getNode()
-                      .scrollTo({x: width * (index + 1), animated: true});
-                  }
-                }}
-              />
-            ))}
+            {SLIDES.map(({subtitle, description}, index) => {
+              const last: boolean = index === SLIDES.length - 1;
+              return (
+                <Subslide
+                  {...{subtitle, description, last}}
+                  key={index}
+                  onPress={() => {
+                    if (last) {
+                      navigation.navigate('Welcome');
+                    } else {
+                      scroll.current
+                        ?.getNode()
+                        .scrollTo({x: width * (index + 1), animated: true});
+                    }
+                  }}
+                />
+              );
+            })}
           </Animated.View>
         </View>
       </View>
@@ -121,7 +128,7 @@ const styles = StyleSheet.create({
   },
   slider: {
     backgroundColor: 'cyan',
-    borderBottomRightRadius: BORDER_RADIUS,
+    borderBottomRightRadius: theme.borderRadii?.xl,
     height: SLIDE_HEIGHT,
   },
   footer: {
@@ -133,7 +140,7 @@ const styles = StyleSheet.create({
   },
   footerContent: {
     backgroundColor: 'white',
-    borderTopLeftRadius: BORDER_RADIUS,
+    borderTopLeftRadius: theme.borderRadii?.xl,
     flex: 1,
     flexDirection: 'row',
   },
@@ -143,7 +150,7 @@ const styles = StyleSheet.create({
   pagination: {
     alignItems: 'center',
     ...(StyleSheet.absoluteFill as object),
-    height: BORDER_RADIUS,
+    height: theme.borderRadii?.xl,
     flexDirection: 'row',
     justifyContent: 'center',
   },
