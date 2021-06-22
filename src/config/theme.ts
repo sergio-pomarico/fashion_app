@@ -1,20 +1,32 @@
 import {BaseTheme, createTheme} from '@shopify/restyle';
 
-// const palette = {};
+const palette = {
+  primary: '#2CB9B0',
+  title: '#0C0D34',
+  text: 'rgba(12,13,52,0.7)',
+  white: '#FFF',
+  grey: 'rgba(12,13,52,0.06)',
+};
 
 const theme: BaseTheme = createTheme({
   colors: {
-    primary: '#2CB9B0',
-    title: '#0C0D34',
-    text: 'rgba(12,13,52,0.7)',
-    white: '#FFF',
-    grey: 'rgba(12,13,52,0.06)',
+    primary: palette.primary,
+    title: palette.title,
+    text: palette.text,
+    white: palette.white,
+    grey: palette.grey,
   },
   spacing: {
     s: 8,
     m: 16,
     l: 24,
     xl: 32,
+  },
+  borderRadii: {
+    s: 4,
+    m: 10,
+    l: 25,
+    xl: 64,
   },
   breakpoints: {},
   textVariants: {
