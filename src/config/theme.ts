@@ -6,6 +6,7 @@ const palette = {
   text: 'rgba(12,13,52,0.7)',
   white: '#FFF',
   grey: 'rgba(12,13,52,0.06)',
+  arena: '#F2F2F2',
 };
 
 const theme: BaseTheme = createTheme({
@@ -15,6 +16,7 @@ const theme: BaseTheme = createTheme({
     text: palette.text,
     white: palette.white,
     grey: palette.grey,
+    arena: palette.arena,
   },
   spacing: {
     s: 8,
