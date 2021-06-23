@@ -1,4 +1,4 @@
-import {BaseTheme, createTheme} from '@shopify/restyle';
+import {createTheme} from '@shopify/restyle';
 
 const palette = {
   primary: '#2CB9B0',
@@ -9,7 +9,7 @@ const palette = {
   arena: '#F2F2F2',
 };
 
-const theme: BaseTheme = createTheme({
+const theme = createTheme({
   colors: {
     primary: palette.primary,
     title: palette.title,

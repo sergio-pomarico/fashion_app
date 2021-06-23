@@ -1,6 +1,5 @@
 import React from 'react';
 
-import {StyleSheet} from 'react-native';
 import {Text, Box, Button} from '../../components';
 
 const WelcomeScreen = () => {
@@ -47,12 +46,5 @@ const WelcomeScreen = () => {
     </Box>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: 'white',
-  },
-});
 
 export default WelcomeScreen;
