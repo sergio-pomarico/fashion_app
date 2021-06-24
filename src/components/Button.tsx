@@ -3,7 +3,7 @@ import React from 'react';
 import {StyleSheet} from 'react-native';
 import {RectButton} from 'react-native-gesture-handler';
 import {useTheme} from '@shopify/restyle';
-import {Theme} from '../config/theme';
+import {Theme} from '@config/theme';
 import {Text} from './';
 
 interface ButtonProps {

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {Text, Box, Button} from '../../components';
+import {Text, Box, Button} from '@components';
 
 const WelcomeScreen = () => {
   return (

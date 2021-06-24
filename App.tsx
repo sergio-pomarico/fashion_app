@@ -1,8 +1,8 @@
 import React from 'react';
 import {ThemeProvider} from '@shopify/restyle';
 
-import Navigation from './src/navigation';
-import theme from './src/config/theme';
+import Navigation from '@navigation/main';
+import theme from '@config/theme';
 
 const App = () => {
   return (

@@ -2,8 +2,8 @@ import React, {useRef, useState} from 'react';
 
 import {Dimensions, StyleSheet, View} from 'react-native';
 import Animated, {interpolateColor, multiply} from 'react-native-reanimated';
-import theme from '../../config/theme';
-import {Route, StackNavigationProps} from '../../core/types';
+import theme from '@config/theme';
+import {Route, StackNavigationProps} from '@core/types';
 import Dot from './components/Dot';
 import Slide, {SLIDE_HEIGHT} from './components/Slide';
 import Subslide from './components/Subslide';
