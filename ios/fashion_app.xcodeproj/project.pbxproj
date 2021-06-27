@@ -8,13 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* fashion_appTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* fashion_appTests.m */; };
-		0CEF56FA99568B0F74987B63 /* libPods-fashion_app.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FC8E19E3686978A36717C01 /* libPods-fashion_app.a */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		61F056621CBF99334EF4823F /* libPods-fashion_app.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AAD700326BCCAE3587960AA2 /* libPods-fashion_app.a */; };
+		782D29C8EA2326D1E9211AAB /* libPods-fashion_app-fashion_appTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B258E6C86A62D154FEB6F7B /* libPods-fashion_app-fashion_appTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		85FE57E3F1C3EB3D432284E7 /* libPods-fashion_app-fashion_appTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 220359C8D0A3E2EE626779A4 /* libPods-fashion_app-fashion_appTests.a */; };
-		8B9781E820A94FB5ACBFFBA2 /* Feather.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E931290333DC4CC8A89F69AC /* Feather.ttf */; };
 		9F05E2E02675208D00B19E51 /* SFProDisplay-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1CF5E377E7EC4F558CEF8CA8 /* SFProDisplay-Bold.ttf */; };
 		9F05E2E12675209200B19E51 /* SFProDisplay-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DF23A07106D446BABFEF7138 /* SFProDisplay-Regular.ttf */; };
 		9F05E2E22675209700B19E51 /* SFProDisplay-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C205CB7522264003BF807F70 /* SFProDisplay-Semibold.ttf */; };
@@ -35,25 +34,40 @@
 		00E356EE1AD99517003FC87E /* fashion_appTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = fashion_appTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* fashion_appTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = fashion_appTests.m; sourceTree = "<group>"; };
+		0834570C340A4B661E2157C2 /* Pods-fashion_app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fashion_app.debug.xcconfig"; path = "Target Support Files/Pods-fashion_app/Pods-fashion_app.debug.xcconfig"; sourceTree = "<group>"; };
+		10C973B7670A49FFAEB4C7EB /* FontAwesome5_Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Regular.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Regular.ttf"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* fashion_app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fashion_app.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = fashion_app/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = fashion_app/AppDelegate.m; sourceTree = "<group>"; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = fashion_app/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = fashion_app/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = fashion_app/main.m; sourceTree = "<group>"; };
+		14838433334B4BE783CA6FB3 /* Zocial.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Zocial.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Zocial.ttf"; sourceTree = "<group>"; };
 		1CF5E377E7EC4F558CEF8CA8 /* SFProDisplay-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "SFProDisplay-Bold.ttf"; path = "../assets/fonts/SFProDisplay-Bold.ttf"; sourceTree = "<group>"; };
-		220359C8D0A3E2EE626779A4 /* libPods-fashion_app-fashion_appTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-fashion_app-fashion_appTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3B98A17A7D9A68D085DC80A1 /* Pods-fashion_app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fashion_app.release.xcconfig"; path = "Target Support Files/Pods-fashion_app/Pods-fashion_app.release.xcconfig"; sourceTree = "<group>"; };
-		3FC8E19E3686978A36717C01 /* libPods-fashion_app.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-fashion_app.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		5807EE9F81D69FC77CC1BE4D /* Pods-fashion_app-fashion_appTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fashion_app-fashion_appTests.release.xcconfig"; path = "Target Support Files/Pods-fashion_app-fashion_appTests/Pods-fashion_app-fashion_appTests.release.xcconfig"; sourceTree = "<group>"; };
-		6E47E819D10D8CA81AC57F56 /* Pods-fashion_app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fashion_app.debug.xcconfig"; path = "Target Support Files/Pods-fashion_app/Pods-fashion_app.debug.xcconfig"; sourceTree = "<group>"; };
+		1D31A9F936C3474091EF6261 /* Octicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Octicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Octicons.ttf"; sourceTree = "<group>"; };
+		2B258E6C86A62D154FEB6F7B /* libPods-fashion_app-fashion_appTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-fashion_app-fashion_appTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		371C5AA92DDC41C08894925E /* Ionicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Ionicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Ionicons.ttf"; sourceTree = "<group>"; };
+		39BBDB4471BE4654B0EFCC02 /* MaterialCommunityIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialCommunityIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialCommunityIcons.ttf"; sourceTree = "<group>"; };
+		3C6404F6D5064927A623457A /* FontAwesome5_Brands.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Brands.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Brands.ttf"; sourceTree = "<group>"; };
+		4DCF377F9E394A5BA6DC0572 /* FontAwesome5_Solid.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Solid.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Solid.ttf"; sourceTree = "<group>"; };
+		6E477948E826072CE89083E9 /* Pods-fashion_app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fashion_app.release.xcconfig"; path = "Target Support Files/Pods-fashion_app/Pods-fashion_app.release.xcconfig"; sourceTree = "<group>"; };
+		71B406DCB85749F0BAE5EC7B /* Entypo.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Entypo.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Entypo.ttf"; sourceTree = "<group>"; };
+		75722FF445714DD796CDAEEC /* MaterialIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialIcons.ttf"; sourceTree = "<group>"; };
+		75E0239321DE4300AB216CF5 /* Fontisto.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Fontisto.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Fontisto.ttf"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = fashion_app/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		84664C3E4DF34164BB767F5D /* SFProDisplay-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "SFProDisplay-Medium.ttf"; path = "../assets/fonts/SFProDisplay-Medium.ttf"; sourceTree = "<group>"; };
-		B76B5F3C996BA89DFB3CC1C2 /* Pods-fashion_app-fashion_appTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fashion_app-fashion_appTests.debug.xcconfig"; path = "Target Support Files/Pods-fashion_app-fashion_appTests/Pods-fashion_app-fashion_appTests.debug.xcconfig"; sourceTree = "<group>"; };
+		8F30582CA00C4ADABF42C1E2 /* AntDesign.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = AntDesign.ttf; path = "../node_modules/react-native-vector-icons/Fonts/AntDesign.ttf"; sourceTree = "<group>"; };
+		AAD700326BCCAE3587960AA2 /* libPods-fashion_app.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-fashion_app.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C205CB7522264003BF807F70 /* SFProDisplay-Semibold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "SFProDisplay-Semibold.ttf"; path = "../assets/fonts/SFProDisplay-Semibold.ttf"; sourceTree = "<group>"; };
+		C916B0CE6D2B96AA45CCD022 /* Pods-fashion_app-fashion_appTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fashion_app-fashion_appTests.release.xcconfig"; path = "Target Support Files/Pods-fashion_app-fashion_appTests/Pods-fashion_app-fashion_appTests.release.xcconfig"; sourceTree = "<group>"; };
+		CDF7F3CD6C4643EF9F34772B /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = SimpleLineIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/SimpleLineIcons.ttf"; sourceTree = "<group>"; };
+		D3434180EA3DD27E085E3DBE /* Pods-fashion_app-fashion_appTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fashion_app-fashion_appTests.debug.xcconfig"; path = "Target Support Files/Pods-fashion_app-fashion_appTests/Pods-fashion_app-fashion_appTests.debug.xcconfig"; sourceTree = "<group>"; };
 		DF23A07106D446BABFEF7138 /* SFProDisplay-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "SFProDisplay-Regular.ttf"; path = "../assets/fonts/SFProDisplay-Regular.ttf"; sourceTree = "<group>"; };
 		E931290333DC4CC8A89F69AC /* Feather.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Feather.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Feather.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		ED7943821E4049359E61E79E /* FontAwesome.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome.ttf"; sourceTree = "<group>"; };
+		F1696851D3EB47FA9B3D9A6C /* EvilIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = EvilIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf"; sourceTree = "<group>"; };
+		FAB8F901FD1A432491D2C92D /* Foundation.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Foundation.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Foundation.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,7 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				85FE57E3F1C3EB3D432284E7 /* libPods-fashion_app-fashion_appTests.a in Frameworks */,
+				782D29C8EA2326D1E9211AAB /* libPods-fashion_app-fashion_appTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,7 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0CEF56FA99568B0F74987B63 /* libPods-fashion_app.a in Frameworks */,
+				61F056621CBF99334EF4823F /* libPods-fashion_app.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,8 +124,8 @@
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				3FC8E19E3686978A36717C01 /* libPods-fashion_app.a */,
-				220359C8D0A3E2EE626779A4 /* libPods-fashion_app-fashion_appTests.a */,
+				AAD700326BCCAE3587960AA2 /* libPods-fashion_app.a */,
+				2B258E6C86A62D154FEB6F7B /* libPods-fashion_app-fashion_appTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -156,6 +170,21 @@
 				C205CB7522264003BF807F70 /* SFProDisplay-Semibold.ttf */,
 				84664C3E4DF34164BB767F5D /* SFProDisplay-Medium.ttf */,
 				E931290333DC4CC8A89F69AC /* Feather.ttf */,
+				8F30582CA00C4ADABF42C1E2 /* AntDesign.ttf */,
+				71B406DCB85749F0BAE5EC7B /* Entypo.ttf */,
+				F1696851D3EB47FA9B3D9A6C /* EvilIcons.ttf */,
+				ED7943821E4049359E61E79E /* FontAwesome.ttf */,
+				3C6404F6D5064927A623457A /* FontAwesome5_Brands.ttf */,
+				10C973B7670A49FFAEB4C7EB /* FontAwesome5_Regular.ttf */,
+				4DCF377F9E394A5BA6DC0572 /* FontAwesome5_Solid.ttf */,
+				75E0239321DE4300AB216CF5 /* Fontisto.ttf */,
+				FAB8F901FD1A432491D2C92D /* Foundation.ttf */,
+				371C5AA92DDC41C08894925E /* Ionicons.ttf */,
+				39BBDB4471BE4654B0EFCC02 /* MaterialCommunityIcons.ttf */,
+				75722FF445714DD796CDAEEC /* MaterialIcons.ttf */,
+				1D31A9F936C3474091EF6261 /* Octicons.ttf */,
+				CDF7F3CD6C4643EF9F34772B /* SimpleLineIcons.ttf */,
+				14838433334B4BE783CA6FB3 /* Zocial.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -163,10 +192,10 @@
 		F15AAEC4C96EF57594DF570A /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				6E47E819D10D8CA81AC57F56 /* Pods-fashion_app.debug.xcconfig */,
-				3B98A17A7D9A68D085DC80A1 /* Pods-fashion_app.release.xcconfig */,
-				B76B5F3C996BA89DFB3CC1C2 /* Pods-fashion_app-fashion_appTests.debug.xcconfig */,
-				5807EE9F81D69FC77CC1BE4D /* Pods-fashion_app-fashion_appTests.release.xcconfig */,
+				0834570C340A4B661E2157C2 /* Pods-fashion_app.debug.xcconfig */,
+				6E477948E826072CE89083E9 /* Pods-fashion_app.release.xcconfig */,
+				D3434180EA3DD27E085E3DBE /* Pods-fashion_app-fashion_appTests.debug.xcconfig */,
+				C916B0CE6D2B96AA45CCD022 /* Pods-fashion_app-fashion_appTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -178,12 +207,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "fashion_appTests" */;
 			buildPhases = (
-				DF70F2864D582857AE4D6E4C /* [CP] Check Pods Manifest.lock */,
+				AF60FB9F2698F6C7526DDF24 /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
-				42016CAF934D0A9EEAC4DC2F /* [CP] Embed Pods Frameworks */,
-				0E91E6FD3D9B452997C4A9AE /* [CP] Copy Pods Resources */,
+				803C199716A7E24E2C306076 /* [CP] Embed Pods Frameworks */,
+				8E57208E8A82A551C7D17FB2 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -199,14 +228,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "fashion_app" */;
 			buildPhases = (
-				B1A6432F517F7E5C4E490296 /* [CP] Check Pods Manifest.lock */,
+				07D4E2A831E6A5D06CB468AF /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
-				C953E332068F9766B1DEFB10 /* [CP] Embed Pods Frameworks */,
-				FB66800E7608BB60C414938F /* [CP] Copy Pods Resources */,
+				51CABF73A5698D81FC7CBB97 /* [CP] Embed Pods Frameworks */,
+				E7E2AB6FF3DC0EED843852CC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -271,7 +300,6 @@
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				E05D6676E73949A59FF5FA80 /* SFProDisplay-Medium.ttf in Resources */,
-				8B9781E820A94FB5ACBFFBA2 /* Feather.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,41 +320,7 @@
 			shellPath = /bin/sh;
 			shellScript = "set -e\n\nexport NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh\n";
 		};
-		0E91E6FD3D9B452997C4A9AE /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-fashion_app-fashion_appTests/Pods-fashion_app-fashion_appTests-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-fashion_app-fashion_appTests/Pods-fashion_app-fashion_appTests-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-fashion_app-fashion_appTests/Pods-fashion_app-fashion_appTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		42016CAF934D0A9EEAC4DC2F /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-fashion_app-fashion_appTests/Pods-fashion_app-fashion_appTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-fashion_app-fashion_appTests/Pods-fashion_app-fashion_appTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-fashion_app-fashion_appTests/Pods-fashion_app-fashion_appTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B1A6432F517F7E5C4E490296 /* [CP] Check Pods Manifest.lock */ = {
+		07D4E2A831E6A5D06CB468AF /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -348,7 +342,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C953E332068F9766B1DEFB10 /* [CP] Embed Pods Frameworks */ = {
+		51CABF73A5698D81FC7CBB97 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -365,7 +359,41 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-fashion_app/Pods-fashion_app-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		DF70F2864D582857AE4D6E4C /* [CP] Check Pods Manifest.lock */ = {
+		803C199716A7E24E2C306076 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-fashion_app-fashion_appTests/Pods-fashion_app-fashion_appTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-fashion_app-fashion_appTests/Pods-fashion_app-fashion_appTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-fashion_app-fashion_appTests/Pods-fashion_app-fashion_appTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8E57208E8A82A551C7D17FB2 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-fashion_app-fashion_appTests/Pods-fashion_app-fashion_appTests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-fashion_app-fashion_appTests/Pods-fashion_app-fashion_appTests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-fashion_app-fashion_appTests/Pods-fashion_app-fashion_appTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AF60FB9F2698F6C7526DDF24 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -387,7 +415,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		FB66800E7608BB60C414938F /* [CP] Copy Pods Resources */ = {
+		E7E2AB6FF3DC0EED843852CC /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -456,7 +484,7 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B76B5F3C996BA89DFB3CC1C2 /* Pods-fashion_app-fashion_appTests.debug.xcconfig */;
+			baseConfigurationReference = D3434180EA3DD27E085E3DBE /* Pods-fashion_app-fashion_appTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -483,7 +511,7 @@
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5807EE9F81D69FC77CC1BE4D /* Pods-fashion_app-fashion_appTests.release.xcconfig */;
+			baseConfigurationReference = C916B0CE6D2B96AA45CCD022 /* Pods-fashion_app-fashion_appTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
@@ -507,7 +535,7 @@
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6E47E819D10D8CA81AC57F56 /* Pods-fashion_app.debug.xcconfig */;
+			baseConfigurationReference = 0834570C340A4B661E2157C2 /* Pods-fashion_app.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -533,7 +561,7 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3B98A17A7D9A68D085DC80A1 /* Pods-fashion_app.release.xcconfig */;
+			baseConfigurationReference = 6E477948E826072CE89083E9 /* Pods-fashion_app.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
