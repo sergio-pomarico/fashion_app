@@ -5,8 +5,10 @@ const palette = {
   title: '#0C0D34',
   text: 'rgba(12,13,52,0.7)',
   white: '#FFF',
-  grey: 'rgba(12,13,52,0.06)',
+  grey: '#F4F0EF',
+  darkGrey: '#8A8D90',
   arena: '#F2F2F2',
+  danger: '#EB5B90',
 };
 
 const theme = createTheme({
@@ -16,7 +18,9 @@ const theme = createTheme({
     text: palette.text,
     white: palette.white,
     grey: palette.grey,
+    darkGrey: palette.darkGrey,
     arena: palette.arena,
+    danger: palette.danger,
   },
   spacing: {
     s: 8,
