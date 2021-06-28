@@ -1,8 +1,11 @@
 import React from 'react';
 
 import {Text, Box, Button} from '@components';
+import {Route, StackNavigationProps} from '@core/types';
 
-const WelcomeScreen = () => {
+const WelcomeScreen = ({
+  navigation,
+}: StackNavigationProps<Route, 'Welcome'>) => {
   return (
     <Box flex={1} backgroundColor="white">
       <Box flex={1} backgroundColor="arena" borderBottomRightRadius="xl" />
@@ -34,7 +37,7 @@ const WelcomeScreen = () => {
           <Button
             label={'Join us, it’s Free'}
             variant={'default'}
-            onPress={() => {}}
+            onPress={() => navigation.navigate('Login')}
           />
           <Button
             label={'Forgot password?'}
