@@ -1,9 +1,7 @@
 import React, {ReactNode} from 'react';
 import Svg, {Path} from 'react-native-svg';
 import {Box} from '@components';
-import theme from '@config/theme';
-
-const SIZE = 2 * theme.borderRadii.l;
+import {useTheme} from '@config/theme';
 
 const Google = () => {
   return (
@@ -57,6 +55,8 @@ interface SocialIconProps {
 }
 
 const SocialIcon = ({children}: SocialIconProps) => {
+  const theme = useTheme();
+  const SIZE = 2 * theme.borderRadii.l;
   return (
     <Box
       width={SIZE}

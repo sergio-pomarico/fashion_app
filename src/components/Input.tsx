@@ -3,7 +3,7 @@ import React, {useState} from 'react';
 import {TextInput, StyleSheet, TextInputProps} from 'react-native';
 import Icon from 'react-native-vector-icons/Feather';
 import {Box} from '@components';
-import theme from '@config/theme';
+import {useTheme} from '@config/theme';
 
 interface InputProps extends TextInputProps {
   placeholder: string;
@@ -13,9 +13,9 @@ interface InputProps extends TextInputProps {
   touched: boolean | undefined;
 }
 
-const SIZE = 2 * theme.borderRadii.m;
-
 const Input = ({icon, onChance, ...props}: InputProps) => {
+  const theme = useTheme();
+  const SIZE = 2 * theme.borderRadii.m;
   const {value = '', touched, error} = props;
   const [text, setText] = useState(value);
 

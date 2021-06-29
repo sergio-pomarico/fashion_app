@@ -1,10 +1,8 @@
 import React, {ReactNode} from 'react';
 
-// import {useTheme} from '@shopify/restyle';
-// import {Theme} from '@config/theme';
+import {useTheme} from '@config/theme';
 import {Box} from '@components';
 import {Image, Dimensions, StyleSheet, StatusBar, Platform} from 'react-native';
-import theme from '@config/theme';
 
 interface ContainerProps {
   children: ReactNode;
@@ -21,7 +19,7 @@ const height = width * aspectRatio;
 export const patterns = [require('../assets/login-pattern.png')];
 
 const Container = ({children, footer}: ContainerProps) => {
-  // const theme = useTheme<Theme>();
+  const theme = useTheme();
   return (
     <Box flex={1} backgroundColor="secondary">
       <StatusBar barStyle="light-content" />
