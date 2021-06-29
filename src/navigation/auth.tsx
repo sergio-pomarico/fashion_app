@@ -8,7 +8,7 @@ import {Route} from '@core/types';
 const AuthStack = createStackNavigator<Route>();
 
 const AuthStackScreen = () => (
-  <AuthStack.Navigator headerMode="none" initialRouteName="Login">
+  <AuthStack.Navigator headerMode="none">
     <AuthStack.Screen name="Onboarding" component={OnboardingScreen} />
     <AuthStack.Screen name="Welcome" component={WelcomeScreen} />
     <AuthStack.Screen name="Login" component={LoginScreen} />

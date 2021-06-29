@@ -1,8 +1,16 @@
 import React from 'react';
 import {useFormik} from 'formik';
 import * as Yup from 'yup';
-import {Button, Container, Box, Text, Input, Link, Checkbox} from '@components';
-import SocialLogin from 'components/SocialLogin';
+import {
+  Button,
+  Container,
+  Box,
+  Text,
+  Input,
+  Link,
+  Checkbox,
+  SocialLogin,
+} from '@components';
 
 const LoginSchema = Yup.object().shape({
   email: Yup.string().email('Invalid email').required('Required'),
