@@ -6,3 +6,4 @@ export {default as Container} from './Container';
 export {default as Checkbox} from './Checkbox';
 export {default as Link} from './Link';
 export {default as SocialLogin} from './SocialLogin';
+export {default as Footer} from './Footer';
