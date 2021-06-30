@@ -1,4 +1,5 @@
-import React from 'react';
+import React, {useRef} from 'react';
+import {TextInput} from 'react-native';
 import {useFormik} from 'formik';
 import * as Yup from 'yup';
 import {
@@ -9,7 +10,7 @@ import {
   Input,
   Link,
   Checkbox,
-  SocialLogin,
+  Footer,
 } from '@components';
 
 const LoginSchema = Yup.object().shape({
@@ -21,33 +22,23 @@ const LoginSchema = Yup.object().shape({
 });
 
 const LoginScreen = () => {
-  const formik = useFormik({
+  const {values, handleChange, touched, errors, handleSubmit} = useFormik({
     initialValues: {
       email: '',
       password: '',
     },
     validationSchema: LoginSchema,
-    onSubmit: values => console.log(values),
+    onSubmit: inputs => console.log(inputs),
   });
 
-  const {values, handleChange, touched, errors, handleSubmit} = formik;
+  const password = useRef<TextInput>(null);
 
   const footer = (
-    <>
-      <SocialLogin />
-      <Box alignItems="center" marginTop="s">
-        <Button variant="transparent" onPress={() => console.warn('SignUp')}>
-          <Box flexDirection="row">
-            <Text variant="button" color="white" marginRight="s">
-              Don’t have an account?
-            </Text>
-            <Text variant="button" color="primary">
-              Sign Up here
-            </Text>
-          </Box>
-        </Button>
-      </Box>
-    </>
+    <Footer
+      label="Don’t have an account?"
+      action="Sign Up here"
+      onPress={() => console.warn('SignUp')}
+    />
   );
 
   return (
@@ -67,10 +58,14 @@ const LoginScreen = () => {
             onChance={handleChange('email')}
             touched={touched.email}
             error={errors.email}
+            returnKeyType="next"
+            returnKeyLabel="Next"
+            onSubmitEditing={() => password.current?.focus()}
           />
         </Box>
         <Box marginVertical="s">
           <Input
+            ref={password}
             placeholder="Enter your password"
             icon="lock"
             value={values.password}
@@ -78,6 +73,8 @@ const LoginScreen = () => {
             touched={touched.password}
             error={errors.password}
             secureTextEntry
+            returnKeyType="send"
+            onSubmitEditing={handleSubmit}
           />
         </Box>
         <Box
