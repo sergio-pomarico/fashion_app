@@ -1,36 +1,25 @@
-import React, {useRef} from 'react';
-import {TextInput} from 'react-native';
+import React from 'react';
+import {Linking} from 'react-native';
 import {useFormik} from 'formik';
 import * as Yup from 'yup';
 import {Route, StackNavigationProps} from '@core/types';
-import {
-  Button,
-  Container,
-  Box,
-  Text,
-  Input,
-  Link,
-  Checkbox,
-  Footer,
-} from '@components';
+import {Button, Container, Box, Text, Input, Footer, Link} from '@components';
 
 const LoginSchema = Yup.object().shape({
   email: Yup.string().email().required(),
-  password: Yup.string().min(6).max(16).required(),
 });
 
-const LoginScreen = ({navigation}: StackNavigationProps<Route, 'SignUp'>) => {
+const ForgotPasswordScreen = ({
+  navigation,
+}: StackNavigationProps<Route, 'ForgotPassword'>) => {
   const {values, handleChange, handleBlur, touched, errors, handleSubmit} =
     useFormik({
       initialValues: {
         email: '',
-        password: '',
       },
       validationSchema: LoginSchema,
       onSubmit: inputs => console.log(inputs),
     });
-
-  const password = useRef<TextInput>(null);
 
   const footer = (
     <Footer
@@ -44,10 +33,10 @@ const LoginScreen = ({navigation}: StackNavigationProps<Route, 'SignUp'>) => {
     <Container {...{footer}}>
       <Box margin="xl">
         <Text variant="h1" textAlign="center">
-          Welcome back
+          Forgot password?
         </Text>
         <Text variant="body" textAlign="center" marginBottom="l">
-          Use your credentials below and login to your account
+          Enter the email address associated with your account
         </Text>
         <Box marginVertical="s">
           <Input
@@ -58,22 +47,6 @@ const LoginScreen = ({navigation}: StackNavigationProps<Route, 'SignUp'>) => {
             touched={touched.email}
             error={errors.email}
             onBlur={handleBlur('email')}
-            returnKeyType="next"
-            returnKeyLabel="Next"
-            onSubmitEditing={() => password.current?.focus()}
-          />
-        </Box>
-        <Box marginVertical="s">
-          <Input
-            ref={password}
-            placeholder="Enter your password"
-            icon="lock"
-            value={values.password}
-            onChance={handleChange('password')}
-            touched={touched.password}
-            error={errors.password}
-            onBlur={handleBlur('password')}
-            secureTextEntry
             returnKeyType="send"
             onSubmitEditing={handleSubmit}
           />
@@ -83,11 +56,11 @@ const LoginScreen = ({navigation}: StackNavigationProps<Route, 'SignUp'>) => {
           alignItems="center"
           marginTop="s"
           marginBottom="l"
-          justifyContent="space-between">
-          <Checkbox label="Remember me" />
+          justifyContent="center">
+          <Text>Don’t work? </Text>
           <Link
-            onPress={() => navigation.navigate('ForgotPassword')}
-            label="Forgot password"
+            onPress={() => Linking.openURL('mailto:support@mail.com')}
+            label="Try another way"
           />
         </Box>
         <Button
@@ -100,4 +73,4 @@ const LoginScreen = ({navigation}: StackNavigationProps<Route, 'SignUp'>) => {
   );
 };
 
-export default LoginScreen;
+export default ForgotPasswordScreen;
