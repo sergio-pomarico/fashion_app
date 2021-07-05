@@ -1,4 +1,4 @@
-import React, {forwardRef, ForwardedRef, useState} from 'react';
+import React, {forwardRef, useState} from 'react';
 
 import {TextInput, StyleSheet, TextInputProps} from 'react-native';
 import Icon from 'react-native-vector-icons/Feather';
@@ -13,8 +13,8 @@ interface InputProps extends TextInputProps {
   touched: boolean | undefined;
 }
 
-const Input = forwardRef(
-  ({icon, onChance, ...props}: InputProps, ref: ForwardedRef<TextInput>) => {
+const Input = forwardRef<TextInput, InputProps>(
+  ({icon, onChance, ...props}, ref) => {
     const theme = useTheme();
     const SIZE = 2 * theme.borderRadii.m;
     const {value = '', touched, error} = props;
