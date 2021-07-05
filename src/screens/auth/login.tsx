@@ -22,14 +22,15 @@ const LoginSchema = Yup.object().shape({
 });
 
 const LoginScreen = () => {
-  const {values, handleChange, touched, errors, handleSubmit} = useFormik({
-    initialValues: {
-      email: '',
-      password: '',
-    },
-    validationSchema: LoginSchema,
-    onSubmit: inputs => console.log(inputs),
-  });
+  const {values, handleChange, handleBlur, touched, errors, handleSubmit} =
+    useFormik({
+      initialValues: {
+        email: '',
+        password: '',
+      },
+      validationSchema: LoginSchema,
+      onSubmit: inputs => console.log(inputs),
+    });
 
   const password = useRef<TextInput>(null);
 
@@ -58,6 +59,7 @@ const LoginScreen = () => {
             onChance={handleChange('email')}
             touched={touched.email}
             error={errors.email}
+            onBlur={handleBlur('email')}
             returnKeyType="next"
             returnKeyLabel="Next"
             onSubmitEditing={() => password.current?.focus()}
@@ -72,6 +74,7 @@ const LoginScreen = () => {
             onChance={handleChange('password')}
             touched={touched.password}
             error={errors.password}
+            onBlur={handleBlur('password')}
             secureTextEntry
             returnKeyType="send"
             onSubmitEditing={handleSubmit}
