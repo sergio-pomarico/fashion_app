@@ -2,6 +2,7 @@ import React, {useRef} from 'react';
 import {TextInput} from 'react-native';
 import {useFormik} from 'formik';
 import * as Yup from 'yup';
+import {Route, StackNavigationProps} from '@core/types';
 import {
   Button,
   Container,
@@ -14,14 +15,11 @@ import {
 } from '@components';
 
 const LoginSchema = Yup.object().shape({
-  email: Yup.string().email('Invalid email').required('Required'),
-  password: Yup.string()
-    .min(6, 'Too Short!')
-    .max(16, 'Too Long!')
-    .required('Required'),
+  email: Yup.string().email().required(),
+  password: Yup.string().min(6).max(16).required(),
 });
 
-const LoginScreen = () => {
+const LoginScreen = ({navigation}: StackNavigationProps<Route, 'SignUp'>) => {
   const {values, handleChange, handleBlur, touched, errors, handleSubmit} =
     useFormik({
       initialValues: {
@@ -38,7 +36,7 @@ const LoginScreen = () => {
     <Footer
       label="Don’t have an account?"
       action="Sign Up here"
-      onPress={() => console.warn('SignUp')}
+      onPress={() => navigation.navigate('SignUp')}
     />
   );
 

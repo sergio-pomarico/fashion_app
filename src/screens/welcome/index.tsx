@@ -27,17 +27,17 @@ const WelcomeScreen = ({
           padding="xl">
           <Text variant="h2">{'Let’s get started'}</Text>
           <Text variant="body">
-            {'Login to your account below or signup for an amazing experience'}
+            Login to your account below or signup for an amazing experience
           </Text>
           <Button
             label={'Have an account? Login'}
             variant={'primary'}
-            onPress={() => {}}
+            onPress={() => navigation.navigate('Login')}
           />
           <Button
             label={'Join us, it’s Free'}
             variant={'default'}
-            onPress={() => navigation.navigate('Login')}
+            onPress={() => navigation.navigate('SignUp')}
           />
           <Button
             label={'Forgot password?'}
