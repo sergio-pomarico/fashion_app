@@ -81,7 +81,7 @@ const SignUpScreen = ({navigation}: StackNavigationProps<Route, 'SignUp'>) => {
         </Box>
         <Box marginTop="s" marginBottom="xl">
           <Input
-            ref={password}
+            ref={passwordConfirmation}
             placeholder="Confirm your password"
             icon="lock"
             value={values.passwordConfirmation}

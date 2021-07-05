@@ -1,9 +1,11 @@
 import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
-import OnboardingScreen from '@screens/onboarding';
-import WelcomeScreen from '@screens/welcome';
-import LoginScreen from '@screens/auth/login';
-import SignUpScreen from '@screens/auth/signup';
+import {
+  OnboardingScreen,
+  WelcomeScreen,
+  LoginScreen,
+  SignUpScreen,
+} from '@screens/auth';
 import {Route} from '@core/types';
 
 const AuthStack = createStackNavigator<Route>();
