@@ -42,7 +42,7 @@ const WelcomeScreen = ({
           <Button
             label={'Forgot password?'}
             variant={'transparent'}
-            onPress={() => {}}
+            onPress={() => navigation.navigate('ForgotPassword')}
           />
         </Box>
       </Box>
