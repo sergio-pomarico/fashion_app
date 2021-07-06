@@ -1,6 +1,6 @@
+import {makeStyle, Theme} from '@config/theme';
 import React from 'react';
 
-import {StyleSheet} from 'react-native';
 import Animated, {Extrapolate, interpolate} from 'react-native-reanimated';
 
 interface DotProps {
@@ -9,6 +9,7 @@ interface DotProps {
 }
 
 const Dot = ({index, currentIndex}: DotProps) => {
+  const styles = useStyles();
   const opacity = interpolate(
     currentIndex,
     [index - 1, index, index + 1],
@@ -26,14 +27,14 @@ const Dot = ({index, currentIndex}: DotProps) => {
   );
 };
 
-const styles = StyleSheet.create({
+const useStyles = makeStyle((theme: Theme) => ({
   dot: {
-    backgroundColor: '#2CB9B0',
+    backgroundColor: theme.colors.primary,
     borderRadius: 4,
     height: 8,
     margin: 4,
     width: 8,
   },
-});
+}));
 
 export default Dot;
