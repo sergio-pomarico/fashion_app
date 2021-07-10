@@ -32,7 +32,9 @@ const Modal = ({visible, onClose, children}: ModalProps) => {
   );
   return (
     <RNModal animationType="slide" visible={visible}>
-      <Container footer={footer}>{children}</Container>
+      <Container footer={footer} pattern={3}>
+        {children}
+      </Container>
     </RNModal>
   );
 };

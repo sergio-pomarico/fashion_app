@@ -44,7 +44,7 @@ const ForgotPasswordScreen = ({
 
   return (
     <>
-      <Container {...{footer}}>
+      <Container {...{footer}} pattern={2}>
         <Box margin="xl">
           <Text variant="h1" textAlign="center">
             Forgot password?

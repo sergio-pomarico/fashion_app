@@ -8,6 +8,7 @@ import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
 interface ContainerProps {
   children: ReactNode;
   footer: ReactNode;
+  pattern: 0 | 1 | 2 | 3;
 }
 
 const isIOS = Platform.OS === 'ios';
@@ -17,9 +18,15 @@ const {width, height: sHeight} = Dimensions.get('screen');
 const aspectRatio = 750 / 1125;
 const height = width * aspectRatio;
 
-export const patterns = [require('../assets/login-pattern.png')];
+export const patterns = [
+  require('../assets/patterns/1.png'),
+  require('../assets/patterns/2.png'),
+  require('../assets/patterns/3.png'),
+  require('../assets/patterns/4.png'),
+];
 
-const Container = ({children, footer}: ContainerProps) => {
+const Container = ({children, footer, pattern}: ContainerProps) => {
+  const asset = patterns[pattern];
   const theme = useTheme();
   return (
     <KeyboardAwareScrollView scrollEnabled={false}>
@@ -30,7 +37,7 @@ const Container = ({children, footer}: ContainerProps) => {
             overflow="hidden"
             height={height * 0.65}>
             <Image
-              source={patterns[0]}
+              source={asset}
               style={{
                 width,
                 height,
@@ -41,7 +48,7 @@ const Container = ({children, footer}: ContainerProps) => {
         </Box>
         <Box flex={1} overflow="hidden">
           <Image
-            source={patterns[0]}
+            source={asset}
             style={{
               width,
               height,

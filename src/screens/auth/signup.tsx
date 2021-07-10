@@ -41,7 +41,7 @@ const SignUpScreen = ({navigation}: StackNavigationProps<Route, 'SignUp'>) => {
   );
 
   return (
-    <Container {...{footer}}>
+    <Container {...{footer}} pattern={1}>
       <Box margin="xl">
         <Text variant="h1" textAlign="center">
           Create account

@@ -41,7 +41,7 @@ const LoginScreen = ({navigation}: StackNavigationProps<Route, 'SignUp'>) => {
   );
 
   return (
-    <Container {...{footer}}>
+    <Container {...{footer}} pattern={0}>
       <Box margin="xl">
         <Text variant="h1" textAlign="center">
           Welcome back
