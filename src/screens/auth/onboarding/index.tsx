@@ -2,11 +2,11 @@ import React, {useRef, useState} from 'react';
 
 import {Dimensions, StyleSheet, View} from 'react-native';
 import Animated, {interpolateColor, multiply} from 'react-native-reanimated';
-import theme from '@config/theme';
+import {makeStyle, Theme} from '@config/theme';
 import {Route, StackNavigationProps} from '@core/types';
-import Dot from './components/Dot';
 import Slide, {SLIDE_HEIGHT} from './components/Slide';
 import Subslide from './components/Subslide';
+import Dot from './components/Dot';
 
 const {width} = Dimensions.get('screen');
 const SLIDES = [
@@ -44,6 +44,7 @@ const OnboardingScreen = ({
   navigation,
 }: StackNavigationProps<Route, 'Onboarding'>) => {
   const [scrollX, setScrollX] = useState(0);
+  const styles = useStyles();
 
   const bgColor = interpolateColor(
     scrollX,
@@ -121,7 +122,7 @@ const OnboardingScreen = ({
   );
 };
 
-const styles = StyleSheet.create({
+const useStyles = makeStyle((theme: Theme) => ({
   container: {
     flex: 1,
     backgroundColor: 'white',
@@ -154,6 +155,6 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'center',
   },
-});
+}));
 
 export default OnboardingScreen;

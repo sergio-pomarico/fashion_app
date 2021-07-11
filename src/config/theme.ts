@@ -1,7 +1,13 @@
-import {createTheme} from '@shopify/restyle';
+import {createTheme, useTheme as useReTheme} from '@shopify/restyle';
+import {ImageStyle, TextStyle, ViewStyle, FlexStyle} from 'react-native';
+
+type NamedStyles<T> = {
+  [P in keyof T]: ViewStyle | TextStyle | ImageStyle | FlexStyle;
+};
 
 const palette = {
   primary: '#2CB9B0',
+  primaryLight: '#E7F9F7',
   secondary: '#0C0D34',
   text: 'rgba(12,13,52,0.7)',
   white: '#FFF',
@@ -14,6 +20,7 @@ const palette = {
 const theme = createTheme({
   colors: {
     primary: palette.primary,
+    primaryLight: palette.primaryLight,
     secondary: palette.secondary,
     text: palette.text,
     white: palette.white,
@@ -71,4 +78,13 @@ const theme = createTheme({
 });
 
 export type Theme = typeof theme;
+export const useTheme = () => useReTheme<Theme>();
+
+export const makeStyle =
+  <T extends NamedStyles<T>>(styles: (theme: Theme) => T) =>
+  () => {
+    const curretTheme = useTheme();
+    return styles(curretTheme);
+  };
+
 export default theme;
