@@ -7,7 +7,7 @@ import {Text} from '@components';
 
 interface ButtonProps {
   label?: string;
-  variant: 'primary' | 'default' | 'transparent';
+  variant: 'primary' | 'default';
   onPress: () => void;
   children?: ReactNode;
 }
@@ -15,11 +15,7 @@ interface ButtonProps {
 const Button = ({variant, label, onPress, children}: ButtonProps) => {
   const theme = useTheme();
   const backgroundColor =
-    variant === 'primary'
-      ? theme.colors.primary
-      : variant === 'transparent'
-      ? 'transparent'
-      : theme.colors.grey;
+    variant === 'primary' ? theme.colors.primary : theme.colors.grey;
   const color =
     variant === 'primary' ? theme.colors.white : theme.colors.secondary;
   return (
