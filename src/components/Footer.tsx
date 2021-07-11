@@ -1,5 +1,5 @@
 import React from 'react';
-import {Button, Box, Text, SocialLogin} from '@components';
+import {Link, Box, Text, SocialLogin} from '@components';
 
 interface FooterProps {
   label?: string;
@@ -12,16 +12,12 @@ const Footer = ({label, action, onPress}: FooterProps) => {
     <>
       <SocialLogin />
       <Box alignItems="center" marginTop="s">
-        <Button variant="transparent" onPress={onPress}>
-          <Box flexDirection="row">
-            <Text variant="button" color="white" marginRight="s">
-              {label}
-            </Text>
-            <Text variant="button" color="primary">
-              {action}
-            </Text>
-          </Box>
-        </Button>
+        <Box flexDirection="row" justifyContent="center" alignItems="center">
+          <Text variant="button" color="white" marginRight="s">
+            {label}
+          </Text>
+          <Link onPress={onPress} label={action as string} />
+        </Box>
       </Box>
     </>
   );

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {Text, Box, Button} from '@components';
+import {Text, Box, Button, Link} from '@components';
 import {Route, StackNavigationProps} from '@core/types';
 
 const WelcomeScreen = ({
@@ -39,11 +39,13 @@ const WelcomeScreen = ({
             variant={'default'}
             onPress={() => navigation.navigate('SignUp')}
           />
-          <Button
-            label={'Forgot password?'}
-            variant={'transparent'}
-            onPress={() => navigation.navigate('ForgotPassword')}
-          />
+          <Box marginVertical="s">
+            <Link
+              label={'Forgot password?'}
+              color="secondary"
+              onPress={() => navigation.navigate('ForgotPassword')}
+            />
+          </Box>
         </Box>
       </Box>
     </Box>
