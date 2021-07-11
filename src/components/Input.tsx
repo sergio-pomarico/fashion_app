@@ -2,7 +2,7 @@ import React, {forwardRef, useState} from 'react';
 
 import {TextInput, StyleSheet, TextInputProps} from 'react-native';
 import Icon from 'react-native-vector-icons/Feather';
-import {Box} from '@components';
+import {Box, RoundedIcon} from '@components';
 import {useTheme} from '@config/theme';
 
 interface InputProps extends TextInputProps {
@@ -52,21 +52,12 @@ const Input = forwardRef<TextInput, InputProps>(
           {...{onChangeText, value: text}}
         />
         {touched && (
-          <Box padding="s">
-            <Box
-              width={SIZE}
-              height={SIZE}
-              borderRadius="m"
-              alignItems="center"
-              justifyContent="center"
-              backgroundColor={colorName}>
-              <Icon
-                name={!error ? 'check' : 'x'}
-                color={theme.colors.white}
-                size={16}
-              />
-            </Box>
-          </Box>
+          <RoundedIcon
+            size={SIZE}
+            name={!error ? 'check' : 'x'}
+            backgroundColor={colorName}
+            color="white"
+          />
         )}
       </Box>
     );

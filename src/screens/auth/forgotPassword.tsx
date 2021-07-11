@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
 import {Linking} from 'react-native';
-import Icon from 'react-native-vector-icons/Feather';
 import {useFormik} from 'formik';
 import * as Yup from 'yup';
 import {Route, StackNavigationProps} from '@core/types';
@@ -13,6 +12,7 @@ import {
   Footer,
   Link,
   Modal,
+  RoundedIcon,
 } from '@components';
 
 const LoginSchema = Yup.object().shape({
@@ -87,17 +87,13 @@ const ForgotPasswordScreen = ({
       <Modal visible={visible} onClose={() => setVisible(!visible)}>
         <Box margin="xl">
           <Box flexDirection="row" justifyContent="center" marginVertical="xl">
-            <Box
-              height={SIZE}
-              width={SIZE}
+            <RoundedIcon
+              size={SIZE}
+              name="check"
+              iconSize={24}
               backgroundColor="primaryLight"
-              alignItems="center"
-              justifyContent="center"
-              style={{borderRadius: SIZE / 2}}>
-              <Text color="primary">
-                <Icon name="check" size={25} />
-              </Text>
-            </Box>
+              color="primary"
+            />
           </Box>
           <Text variant="h1" textAlign="center">
             Your password was successfully changed

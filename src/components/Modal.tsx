@@ -1,8 +1,7 @@
 import React, {ReactNode} from 'react';
 import {Modal as RNModal, TouchableOpacity} from 'react-native';
 
-import {Container, Box, Text} from '@components';
-import Icon from 'react-native-vector-icons/Feather';
+import {Container, Box, RoundedIcon} from '@components';
 
 interface ModalProps {
   visible: boolean;
@@ -16,17 +15,13 @@ const Modal = ({visible, onClose, children}: ModalProps) => {
   const footer = (
     <TouchableOpacity onPress={onClose}>
       <Box flexDirection="row" justifyContent="center">
-        <Box
-          height={SIZE}
-          width={SIZE}
+        <RoundedIcon
+          size={SIZE}
           backgroundColor="white"
-          style={{borderRadius: SIZE / 2}}
-          alignItems="center"
-          justifyContent="center">
-          <Text color="secondary">
-            <Icon name="x" size={35} />
-          </Text>
-        </Box>
+          name="x"
+          color="secondary"
+          iconSize={32}
+        />
       </Box>
     </TouchableOpacity>
   );
