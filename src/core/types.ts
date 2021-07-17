@@ -9,10 +9,14 @@ export interface StackNavigationProps<
   route: RouteProp<ParamList, RouteName>;
 }
 
-export type Route = {
+export type AuthRoutes = {
   Onboarding: undefined;
   Welcome: undefined;
   Login: undefined;
   SignUp: undefined;
   ForgotPassword: undefined;
+};
+
+export type AppRoutes = {
+  Home: undefined;
 };

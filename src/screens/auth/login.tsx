@@ -2,7 +2,7 @@ import React, {useRef} from 'react';
 import {TextInput} from 'react-native';
 import {useFormik} from 'formik';
 import * as Yup from 'yup';
-import {Route, StackNavigationProps} from '@core/types';
+import {AuthRoutes, StackNavigationProps} from '@core/types';
 import {
   Button,
   Container,
@@ -19,7 +19,9 @@ const LoginSchema = Yup.object().shape({
   password: Yup.string().min(6).max(16).required(),
 });
 
-const LoginScreen = ({navigation}: StackNavigationProps<Route, 'SignUp'>) => {
+const LoginScreen = ({
+  navigation,
+}: StackNavigationProps<AuthRoutes, 'SignUp'>) => {
   const {values, handleChange, handleBlur, touched, errors, handleSubmit} =
     useFormik({
       initialValues: {

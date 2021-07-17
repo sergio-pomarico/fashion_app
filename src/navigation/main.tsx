@@ -1,11 +1,11 @@
 import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
-import AuthStackScreen from './auth';
+import AuthStackNavigation from './auth';
 
 export default () => {
   return (
     <NavigationContainer>
-      <AuthStackScreen />
+      <AuthStackNavigation />
     </NavigationContainer>
   );
 };

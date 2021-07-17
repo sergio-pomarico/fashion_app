@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import {Linking} from 'react-native';
 import {useFormik} from 'formik';
 import * as Yup from 'yup';
-import {Route, StackNavigationProps} from '@core/types';
+import {AuthRoutes, StackNavigationProps} from '@core/types';
 import {
   Button,
   Container,
@@ -23,7 +23,7 @@ const SIZE = 80;
 
 const ForgotPasswordScreen = ({
   navigation,
-}: StackNavigationProps<Route, 'ForgotPassword'>) => {
+}: StackNavigationProps<AuthRoutes, 'ForgotPassword'>) => {
   const [visible, setVisible] = useState(false);
   const {values, handleChange, handleBlur, touched, errors, handleSubmit} =
     useFormik({

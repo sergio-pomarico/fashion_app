@@ -7,11 +7,11 @@ import {
   SignUpScreen,
   ForgotPasswordScreen,
 } from '@screens/auth';
-import {Route} from '@core/types';
+import {AuthRoutes} from '@core/types';
 
-const AuthStack = createStackNavigator<Route>();
+const AuthStack = createStackNavigator<AuthRoutes>();
 
-const AuthStackScreen = () => (
+const AuthStackNavigation = () => (
   <AuthStack.Navigator headerMode="none">
     <AuthStack.Screen name="Onboarding" component={OnboardingScreen} />
     <AuthStack.Screen name="Welcome" component={WelcomeScreen} />
@@ -21,4 +21,4 @@ const AuthStackScreen = () => (
   </AuthStack.Navigator>
 );
 
-export default AuthStackScreen;
+export default AuthStackNavigation;
