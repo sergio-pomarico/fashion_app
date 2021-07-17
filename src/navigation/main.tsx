@@ -1,11 +1,13 @@
 import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import AuthStackNavigation from './auth';
+import AppStackNavigation from './app';
 
 export default () => {
+  const isAuth: boolean = true;
   return (
     <NavigationContainer>
-      <AuthStackNavigation />
+      {isAuth ? <AppStackNavigation /> : <AuthStackNavigation />}
     </NavigationContainer>
   );
 };
