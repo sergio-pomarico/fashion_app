@@ -3,7 +3,7 @@ import React, {useRef, useState} from 'react';
 import {Dimensions, StyleSheet, View} from 'react-native';
 import Animated, {interpolateColor, multiply} from 'react-native-reanimated';
 import {makeStyle, Theme} from '@config/theme';
-import {Route, StackNavigationProps} from '@core/types';
+import {AuthRoutes, StackNavigationProps} from '@core/types';
 import Slide, {SLIDE_HEIGHT} from './components/Slide';
 import Subslide from './components/Subslide';
 import Dot from './components/Dot';
@@ -42,7 +42,7 @@ const SLIDES = [
 
 const OnboardingScreen = ({
   navigation,
-}: StackNavigationProps<Route, 'Onboarding'>) => {
+}: StackNavigationProps<AuthRoutes, 'Onboarding'>) => {
   const [scrollX, setScrollX] = useState(0);
   const styles = useStyles();
 
@@ -71,7 +71,11 @@ const OnboardingScreen = ({
             setScrollX(scrolling);
           }}>
           {SLIDES.map(({title}, index) => (
-            <Slide title={title} key={index} right={!!(index % 2)} />
+            <Slide
+              title={title}
+              key={title.toLowerCase()}
+              right={!!(index % 2)}
+            />
           ))}
         </Animated.ScrollView>
       </View>
@@ -81,8 +85,11 @@ const OnboardingScreen = ({
         />
         <View style={styles.footerContent}>
           <View style={styles.pagination}>
-            {SLIDES.map((_, index) => (
-              <Dot key={index} {...{index, currentIndex: scrollX / width}} />
+            {SLIDES.map(({title}, index) => (
+              <Dot
+                key={`dot__${title.toLowerCase()}`}
+                {...{index, currentIndex: scrollX / width}}
+              />
             ))}
           </View>
           <Animated.View
@@ -97,12 +104,12 @@ const OnboardingScreen = ({
                 ],
               },
             ]}>
-            {SLIDES.map(({subtitle, description}, index) => {
+            {SLIDES.map(({title, subtitle, description}, index) => {
               const last: boolean = index === SLIDES.length - 1;
               return (
                 <Subslide
                   {...{subtitle, description, last}}
-                  key={index}
+                  key={`content__${title.toLowerCase()}`}
                   onPress={() => {
                     if (last) {
                       navigation.navigate('Welcome');
