@@ -18,5 +18,5 @@ export type AuthRoutes = {
 };
 
 export type AppRoutes = {
-  Home: undefined;
+  OutfitIdeas: undefined;
 };
