@@ -15,6 +15,10 @@ const palette = {
   darkGrey: '#8A8D90',
   arena: '#F2F2F2',
   danger: '#EB5B90',
+  orange: '#FE5E33',
+  yellow: '#FFC641',
+  pink: '#FF87A2',
+  violet: '#442CB9',
 };
 
 const theme = createTheme({
@@ -28,6 +32,10 @@ const theme = createTheme({
     darkGrey: palette.darkGrey,
     arena: palette.arena,
     danger: palette.danger,
+    orange: palette.orange,
+    yellow: palette.yellow,
+    pink: palette.pink,
+    violet: palette.violet,
   },
   spacing: {
     s: 8,
