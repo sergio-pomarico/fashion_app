@@ -1,17 +1,16 @@
 import React, {ReactNode} from 'react';
+import {Image, Dimensions, StyleSheet} from 'react-native';
+import {useSafeAreaInsets} from 'react-native-safe-area-context';
+import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
 
 import {useTheme} from '@config/theme';
 import {Box} from '@components';
-import {Image, Dimensions, StyleSheet, Platform} from 'react-native';
-import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
 
 interface ContainerProps {
   children: ReactNode;
   footer: ReactNode;
   pattern: 0 | 1 | 2 | 3;
 }
-
-const isIOS = Platform.OS === 'ios';
 
 const {width, height: sHeight} = Dimensions.get('screen');
 
@@ -27,6 +26,7 @@ export const patterns = [
 
 const Container = ({children, footer, pattern}: ContainerProps) => {
   const asset = patterns[pattern];
+  const insets = useSafeAreaInsets();
   const theme = useTheme();
   return (
     <KeyboardAwareScrollView scrollEnabled={false}>
@@ -66,7 +66,7 @@ const Container = ({children, footer, pattern}: ContainerProps) => {
         </Box>
         <Box
           backgroundColor="secondary"
-          paddingBottom={isIOS ? 'l' : 'm'}
+          style={{paddingBottom: insets.bottom}}
           paddingTop="l">
           {footer}
         </Box>
