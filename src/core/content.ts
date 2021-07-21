@@ -1,6 +1,6 @@
 export const menu = [
   {
-    icon: 'flash',
+    icon: 'zap',
     label: 'Outfit Ideas',
     screen: 'OutfitIdeas',
     color: 'primary',
@@ -22,6 +22,12 @@ export const menu = [
     label: 'Transactions History',
     screen: 'TransactionsHistory',
     color: 'pink',
+  },
+  {
+    icon: 'settings',
+    label: 'Notifications Settings',
+    screen: 'NotificationsSettings',
+    color: 'violet',
   },
   {
     icon: 'log-out',

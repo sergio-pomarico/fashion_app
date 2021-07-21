@@ -9,3 +9,4 @@ export {default as SocialLogin} from './SocialLogin';
 export {default as Footer} from './Footer';
 export {default as Modal} from './Modal';
 export {default as RoundedIcon} from './RoundedIcon';
+export {default as Drawer, DRAWER_WIDTH} from './Drawer';
