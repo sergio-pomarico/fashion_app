@@ -1,10 +1,15 @@
 import React from 'react';
-import {Box, Text, RoundedIcon} from '@components';
+import {Box, Text, Header} from '@components';
 import {Dimensions, Image, StyleSheet} from 'react-native';
 
 import DrawerItem from './Item';
 import {menu} from '@core/content';
 import {Theme, useTheme} from '@config/theme';
+import {DrawerActions} from '@react-navigation/native';
+import {
+  DrawerContentComponentProps,
+  DrawerContentOptions,
+} from '@react-navigation/drawer';
 
 const {width} = Dimensions.get('screen');
 
@@ -13,7 +18,9 @@ const aspectRatio = 560 / 1125;
 const height = width * aspectRatio;
 const drawerBG = require('../../assets/patterns/drawer.jpg');
 
-const Drawer = () => {
+const Drawer = ({
+  navigation,
+}: DrawerContentComponentProps<DrawerContentOptions>) => {
   const theme = useTheme();
   return (
     <Box flex={1}>
@@ -21,29 +28,20 @@ const Drawer = () => {
         <Box
           backgroundColor="secondary"
           borderBottomRightRadius="xl"
+          position="absolute"
           bottom={0}
           left={0}
           right={0}
           top={0}
-          position="absolute"
-          flexDirection="row"
-          padding="m"
-          alignItems="center"
-          justifyContent="space-between">
-          <RoundedIcon
-            name="x"
-            color="white"
-            backgroundColor="secondary"
-            iconSize={14}
-            size={30}
-          />
-          <Text color="white">MY PROFILE</Text>
-          <RoundedIcon
-            name="shopping-bag"
-            color="white"
-            backgroundColor="secondary"
-            iconSize={16}
-            size={30}
+          alignItems="center">
+          <Header
+            dark={true}
+            title={'MY PROFILE'}
+            left={{
+              icon: 'x',
+              onPress: () => navigation.dispatch(DrawerActions.toggleDrawer()),
+            }}
+            right={{icon: 'shopping-bag', onPress: () => {}}}
           />
         </Box>
       </Box>
