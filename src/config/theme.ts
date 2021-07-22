@@ -12,6 +12,7 @@ const palette = {
   text: 'rgba(12,13,52,0.7)',
   white: '#FFF',
   grey: '#F4F0EF',
+  lightGrey: '#FAFAFA',
   darkGrey: '#8A8D90',
   arena: '#F2F2F2',
   danger: '#EB5B90',
@@ -36,6 +37,7 @@ const theme = createTheme({
     yellow: palette.yellow,
     pink: palette.pink,
     violet: palette.violet,
+    lightGrey: palette.lightGrey,
   },
   spacing: {
     s: 8,
@@ -70,6 +72,12 @@ const theme = createTheme({
       fontSize: 24,
       lineHeight: 30,
       textAlign: 'center',
+    },
+    header: {
+      fontFamily: 'SFProDisplay-Semibold',
+      lineHeight: 24,
+      fontSize: 14,
+      color: 'secondary',
     },
     body: {
       color: 'text',
