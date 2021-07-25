@@ -11,9 +11,10 @@ interface DrawerItemProps {
 }
 
 const DrawerItem = ({icon, color, label}: DrawerItemProps) => {
+  const borderRadius = 25;
   return (
     <Box marginVertical="s">
-      <RectButton style={{borderRadius: 25}}>
+      <RectButton style={{borderRadius}}>
         <Box flexDirection="row" alignItems="center">
           <RoundedIcon
             name={icon}

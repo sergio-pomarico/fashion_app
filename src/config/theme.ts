@@ -20,6 +20,7 @@ const palette = {
   yellow: '#FFC641',
   pink: '#FF87A2',
   violet: '#442CB9',
+  lightBlue: '#BFEAF5',
 };
 
 const theme = createTheme({
@@ -38,6 +39,7 @@ const theme = createTheme({
     pink: palette.pink,
     violet: palette.violet,
     lightGrey: palette.lightGrey,
+    lightBlue: palette.lightBlue,
   },
   spacing: {
     s: 8,

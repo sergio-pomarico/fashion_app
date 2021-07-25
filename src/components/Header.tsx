@@ -22,7 +22,6 @@ const Header = ({title, left, right, dark}: HeaderProps) => {
   const backgroundColor = dark ? 'secondary' : 'lightGrey';
   return (
     <Box
-      position="absolute"
       flexDirection="row"
       alignItems="center"
       width="100%"
