@@ -12,9 +12,15 @@ const palette = {
   text: 'rgba(12,13,52,0.7)',
   white: '#FFF',
   grey: '#F4F0EF',
+  lightGrey: '#FAFAFA',
   darkGrey: '#8A8D90',
   arena: '#F2F2F2',
   danger: '#EB5B90',
+  orange: '#FE5E33',
+  yellow: '#FFC641',
+  pink: '#FF87A2',
+  violet: '#442CB9',
+  lightBlue: '#BFEAF5',
 };
 
 const theme = createTheme({
@@ -28,6 +34,12 @@ const theme = createTheme({
     darkGrey: palette.darkGrey,
     arena: palette.arena,
     danger: palette.danger,
+    orange: palette.orange,
+    yellow: palette.yellow,
+    pink: palette.pink,
+    violet: palette.violet,
+    lightGrey: palette.lightGrey,
+    lightBlue: palette.lightBlue,
   },
   spacing: {
     s: 8,
@@ -62,6 +74,12 @@ const theme = createTheme({
       fontSize: 24,
       lineHeight: 30,
       textAlign: 'center',
+    },
+    header: {
+      fontFamily: 'SFProDisplay-Semibold',
+      lineHeight: 24,
+      fontSize: 14,
+      color: 'secondary',
     },
     body: {
       color: 'text',

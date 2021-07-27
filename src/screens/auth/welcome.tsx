@@ -1,11 +1,11 @@
 import React from 'react';
 
 import {Text, Box, Button, Link} from '@components';
-import {Route, StackNavigationProps} from '@core/types';
+import {AuthRoutes, StackNavigationProps} from '@core/types';
 
 const WelcomeScreen = ({
   navigation,
-}: StackNavigationProps<Route, 'Welcome'>) => {
+}: StackNavigationProps<AuthRoutes, 'Welcome'>) => {
   return (
     <Box flex={1} backgroundColor="white">
       <Box flex={1} backgroundColor="arena" borderBottomRightRadius="xl" />

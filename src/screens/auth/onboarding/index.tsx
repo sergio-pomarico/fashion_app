@@ -3,53 +3,24 @@ import React, {useRef, useState} from 'react';
 import {Dimensions, StyleSheet, View} from 'react-native';
 import Animated, {interpolateColor, multiply} from 'react-native-reanimated';
 import {makeStyle, Theme} from '@config/theme';
-import {Route, StackNavigationProps} from '@core/types';
+import {AuthRoutes, StackNavigationProps} from '@core/types';
+import {slides} from '@core/content';
 import Slide, {SLIDE_HEIGHT} from './components/Slide';
 import Subslide from './components/Subslide';
 import Dot from './components/Dot';
 
 const {width} = Dimensions.get('screen');
-const SLIDES = [
-  {
-    title: 'Relaxed',
-    color: '#BFEAF5',
-    subtitle: 'Find your outfit',
-    description:
-      "Confused about your outfit ? Don't worry! find the best outfit here",
-  },
-  {
-    title: 'Playful',
-    color: '#BEECC4',
-    subtitle: 'Hear is first, wear is first',
-    description:
-      'Hating you clothes in your wardrobe ?, explore hundreds of outfit ideas',
-  },
-  {
-    title: 'Excentric',
-    color: '#FFE4D9',
-    subtitle: 'Your style, your way',
-    description:
-      'Create your individual and unique style and look amazing everyday',
-  },
-  {
-    title: 'Funky',
-    color: '#FFDDDD',
-    subtitle: 'Look good, feel good',
-    description:
-      'Discover the latest trends in fashion and explore your personality',
-  },
-];
 
 const OnboardingScreen = ({
   navigation,
-}: StackNavigationProps<Route, 'Onboarding'>) => {
+}: StackNavigationProps<AuthRoutes, 'Onboarding'>) => {
   const [scrollX, setScrollX] = useState(0);
   const styles = useStyles();
 
   const bgColor = interpolateColor(
     scrollX,
-    SLIDES.map((_, i) => i * width),
-    SLIDES.map(slide => slide.color),
+    slides.map((_, i) => i * width),
+    slides.map(slide => slide.color),
     'RGB',
   );
 
@@ -70,8 +41,12 @@ const OnboardingScreen = ({
             const scrolling = event.nativeEvent.contentOffset.x;
             setScrollX(scrolling);
           }}>
-          {SLIDES.map(({title}, index) => (
-            <Slide title={title} key={index} right={!!(index % 2)} />
+          {slides.map(({title}, index) => (
+            <Slide
+              title={title}
+              key={title.toLowerCase()}
+              right={!!(index % 2)}
+            />
           ))}
         </Animated.ScrollView>
       </View>
@@ -81,15 +56,18 @@ const OnboardingScreen = ({
         />
         <View style={styles.footerContent}>
           <View style={styles.pagination}>
-            {SLIDES.map((_, index) => (
-              <Dot key={index} {...{index, currentIndex: scrollX / width}} />
+            {slides.map(({title}, index) => (
+              <Dot
+                key={`dot__${title.toLowerCase()}`}
+                {...{index, currentIndex: scrollX / width}}
+              />
             ))}
           </View>
           <Animated.View
             style={[
               styles.footerSlide,
               {
-                width: width * SLIDES.length,
+                width: width * slides.length,
                 transform: [
                   {
                     translateX: multiply(scrollX, -1),
@@ -97,12 +75,12 @@ const OnboardingScreen = ({
                 ],
               },
             ]}>
-            {SLIDES.map(({subtitle, description}, index) => {
-              const last: boolean = index === SLIDES.length - 1;
+            {slides.map(({title, subtitle, description}, index) => {
+              const last: boolean = index === slides.length - 1;
               return (
                 <Subslide
                   {...{subtitle, description, last}}
-                  key={index}
+                  key={`content__${title.toLowerCase()}`}
                   onPress={() => {
                     if (last) {
                       navigation.navigate('Welcome');
