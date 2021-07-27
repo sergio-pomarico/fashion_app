@@ -6,7 +6,6 @@ import {RectButton} from 'react-native-gesture-handler';
 interface DrawerItemProps {
   icon: string;
   color: keyof Theme['colors'];
-  screen: string;
   label: string;
   onPress: () => void;
 }
