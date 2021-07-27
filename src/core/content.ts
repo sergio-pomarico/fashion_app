@@ -7,7 +7,7 @@ export const menu = [
   },
   {
     icon: 'heart',
-    label: 'Outfit Ideas',
+    label: 'Favorites Outfits',
     screen: 'FavoritesOutfits',
     color: 'orange',
   },

@@ -15,6 +15,7 @@ const {width} = Dimensions.get('screen');
 
 export const DRAWER_WIDTH = width * 0.8;
 const aspectRatio = 560 / 1125;
+const borderRadius = 50;
 const height = width * aspectRatio;
 const drawerBG = require('../../assets/patterns/drawer.jpg');
 
@@ -65,8 +66,7 @@ const Drawer = ({
             alignSelf="center"
             width={100}
             height={100}
-            // eslint-disable-next-line react-native/no-inline-styles
-            style={{borderRadius: 50}}
+            style={{borderRadius}}
             backgroundColor="primary"
           />
           <Box marginTop="xl">
@@ -82,6 +82,7 @@ const Drawer = ({
               color={item.color as keyof Theme['colors']}
               screen={item.screen}
               label={item.label}
+              onPress={() => navigation.navigate(item.screen)}
             />
           ))}
         </Box>

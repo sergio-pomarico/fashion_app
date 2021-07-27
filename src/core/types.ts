@@ -19,4 +19,5 @@ export type AuthRoutes = {
 
 export type AppRoutes = {
   OutfitIdeas: undefined;
+  FavoritesOutfits: undefined;
 };

@@ -8,13 +8,14 @@ interface DrawerItemProps {
   color: keyof Theme['colors'];
   screen: string;
   label: string;
+  onPress: () => void;
 }
 
-const DrawerItem = ({icon, color, label}: DrawerItemProps) => {
+const DrawerItem = ({icon, color, label, onPress}: DrawerItemProps) => {
   const borderRadius = 25;
   return (
     <Box marginVertical="s">
-      <RectButton style={{borderRadius}}>
+      <RectButton style={{borderRadius}} onPress={onPress}>
         <Box flexDirection="row" alignItems="center">
           <RoundedIcon
             name={icon}
