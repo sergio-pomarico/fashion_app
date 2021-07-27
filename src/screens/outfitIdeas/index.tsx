@@ -5,6 +5,7 @@ import {AppRoutes, StackNavigationProps} from '@core/types';
 import {DrawerActions} from '@react-navigation/native';
 
 import Background from './components/Background';
+import Categories from './components/Categories';
 
 const OutfitIdeasScreen = ({
   navigation,
@@ -19,6 +20,7 @@ const OutfitIdeasScreen = ({
         }}
         right={{icon: 'shopping-bag', onPress: () => {}}}
       />
+      <Categories />
       <Box flex={1}>
         <Background />
       </Box>

@@ -67,3 +67,31 @@ export const slides = [
       'Discover the latest trends in fashion and explore your personality',
   },
 ];
+
+export const categories = [
+  {
+    id: 'newin',
+    title: 'Newin',
+    color: '#FFDDDD',
+  },
+  {
+    id: 'summer',
+    title: 'Summer',
+    color: '#BEECC4',
+  },
+  {
+    id: 'activewear',
+    title: 'Activewear',
+    color: '#BFEAF5',
+  },
+  {
+    id: 'outlet',
+    title: 'outlet',
+    color: '#F1E0FF',
+  },
+  {
+    id: 'accesories',
+    title: 'Accesories',
+    color: '#FFE8E9',
+  },
+];
