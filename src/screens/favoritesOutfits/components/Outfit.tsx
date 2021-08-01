@@ -14,7 +14,6 @@ const Outfit = ({
   outfit: {color: backgroundColor, aspectRatio},
   width,
 }: OutfitProps) => {
-  console.log(aspectRatio * width);
   return (
     <Box
       borderRadius="m"
