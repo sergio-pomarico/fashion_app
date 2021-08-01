@@ -80,7 +80,6 @@ const Drawer = ({
               key={item.screen.toLowerCase()}
               icon={item.icon}
               color={item.color as keyof Theme['colors']}
-              screen={item.screen}
               label={item.label}
               onPress={() => navigation.navigate(item.screen)}
             />
