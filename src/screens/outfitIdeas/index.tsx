@@ -5,6 +5,7 @@ import {AppRoutes, StackNavigationProps} from '@core/types';
 import {DrawerActions} from '@react-navigation/native';
 
 import Background from './components/Background';
+import Card from './components/Card';
 import Categories from './components/Categories';
 
 const OutfitIdeasScreen = ({
@@ -23,6 +24,9 @@ const OutfitIdeasScreen = ({
       <Categories />
       <Box flex={1}>
         <Background />
+        <Card position={1} />
+        <Card position={0.5} />
+        <Card position={0} />
       </Box>
     </Box>
   );
