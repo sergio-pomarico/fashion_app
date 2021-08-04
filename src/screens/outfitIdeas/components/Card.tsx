@@ -10,12 +10,14 @@ import Animated, {
   useAnimatedStyle,
   useAnimatedGestureHandler,
   withSpring,
+  runOnJS,
 } from 'react-native-reanimated';
 
 import {Box} from '@components';
 
 interface CardProps {
   position: number;
+  onSwipe: () => void;
 }
 
 type Context = {
@@ -47,7 +49,7 @@ const α = Math.PI / 12;
 const A = Math.sin(α) * height + Math.cos(α) * width;
 const snapPoints = [-A, 0, A];
 
-const Card = ({position}: CardProps) => {
+const Card = ({position, onSwipe}: CardProps) => {
   const backgroundColor = interpolateColor(
     position,
     [0, 1],
@@ -75,6 +77,9 @@ const Card = ({position}: CardProps) => {
       const dest = snapPoint(translateX.value, velocityX, snapPoints);
       translateX.value = withSpring(dest, {velocity: velocityX});
       translateY.value = withSpring(0, {velocity: velocityY});
+      if (dest !== 0) {
+        runOnJS(onSwipe)();
+      }
     },
   });
 

@@ -138,3 +138,18 @@ export const outfits = [
     aspectRatio: 160 / 145,
   },
 ];
+
+export const cards = [
+  {
+    id: 3,
+  },
+  {
+    id: 2,
+  },
+  {
+    id: 1,
+  },
+  {
+    id: 0,
+  },
+];
