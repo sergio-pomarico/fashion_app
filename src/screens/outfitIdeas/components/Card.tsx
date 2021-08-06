@@ -13,6 +13,7 @@ import Animated, {
   runOnJS,
 } from 'react-native-reanimated';
 
+import {mix, generarteSnapPoint} from '@core/utils';
 import {Box} from '@components';
 
 interface CardProps {
@@ -29,21 +30,6 @@ const {width: wWidth} = Dimensions.get('screen');
 const width = wWidth * 0.75;
 const height = width * (425 / 294);
 const borderRadius = 24;
-
-const mix = (value: number, x: number, y: number): number =>
-  x * (1 - value) + y * value;
-
-export const snapPoint = (
-  value: number,
-  velocity: number,
-  points: ReadonlyArray<number>,
-): number => {
-  'worklet';
-  const point = value + 0.2 * velocity;
-  const deltas = points.map(p => Math.abs(point - p));
-  const minDelta = Math.min.apply(null, deltas);
-  return points.filter(p => Math.abs(point - p) === minDelta)[0];
-};
 
 const α = Math.PI / 12;
 const A = Math.sin(α) * height + Math.cos(α) * width;
@@ -74,7 +60,7 @@ const Card = ({position, onSwipe}: CardProps) => {
       translateY.value = ctx.offsetY + translationY;
     },
     onEnd: ({velocityX, velocityY}) => {
-      const dest = snapPoint(translateX.value, velocityX, snapPoints);
+      const dest = generarteSnapPoint(translateX.value, velocityX, snapPoints);
       translateX.value = withSpring(dest, {velocity: velocityX});
       translateY.value = withSpring(0, {velocity: velocityY});
       if (dest !== 0) {
