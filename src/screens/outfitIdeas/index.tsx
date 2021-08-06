@@ -3,13 +3,13 @@ import React, {useCallback, useState} from 'react';
 import {Box, Header} from '@components';
 import {AppRoutes, StackNavigationProps} from '@core/types';
 import {DrawerActions} from '@react-navigation/native';
+import {interpolate} from 'react-native-reanimated';
 
 import Background from './components/Background';
 import Card from './components/Card';
 import Categories from './components/Categories';
 
 import {cards} from '@core/content';
-import {interpolate} from 'react-native-reanimated';
 
 const OutfitIdeasScreen = ({
   navigation,
@@ -35,7 +35,11 @@ const OutfitIdeasScreen = ({
           ({id}) =>
             id >= currentIndex && (
               <Card
-                position={interpolate(id, [0, cards.length - 1], [0, 1])}
+                position={interpolate(
+                  id,
+                  [currentIndex, cards.length - 1],
+                  [0, 1],
+                )}
                 key={id}
                 {...{onSwipe}}
               />
