@@ -1,25 +1,44 @@
-import {Box} from '@components';
-import React from 'react';
+import React, {useState} from 'react';
+import {TouchableOpacity} from 'react-native';
+import {Box, RoundedIcon} from '@components';
 
 interface OutfitProps {
   outfit: {
     color: string;
     aspectRatio: number;
     id: number;
+    selected: boolean;
   };
   width: number;
 }
 
-const Outfit = ({
-  outfit: {color: backgroundColor, aspectRatio},
-  width,
-}: OutfitProps) => {
+const Outfit = ({outfit, width}: OutfitProps) => {
+  const [selected, setSelected] = useState(outfit.selected);
   return (
-    <Box
-      borderRadius="m"
-      marginBottom="m"
-      style={{backgroundColor, height: aspectRatio * width, width}}
-    />
+    <TouchableOpacity
+      onPress={() => {
+        outfit.selected = !outfit.selected;
+        setSelected(prev => !prev);
+      }}>
+      <Box
+        borderRadius="m"
+        marginBottom="m"
+        alignItems="flex-end"
+        style={{
+          backgroundColor: outfit.color,
+          height: outfit.aspectRatio * width,
+          width,
+        }}>
+        {selected && (
+          <RoundedIcon
+            name="check"
+            color="white"
+            backgroundColor="primary"
+            size={24}
+          />
+        )}
+      </Box>
+    </TouchableOpacity>
   );
 };
 

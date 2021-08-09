@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
-import {Box, Text} from '@components';
 import {View, TouchableOpacity, StyleSheet} from 'react-native';
+import {Box, Text} from '@components';
 
 interface CategoryProps {
   category: {

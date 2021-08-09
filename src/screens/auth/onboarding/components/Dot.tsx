@@ -1,5 +1,5 @@
-import {makeStyle, Theme} from '@config/theme';
 import React from 'react';
+import {makeStyle, Theme} from '@config/theme';
 
 import Animated, {Extrapolate, interpolate} from 'react-native-reanimated';
 

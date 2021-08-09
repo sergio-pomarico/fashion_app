@@ -2,8 +2,9 @@ import React, {useRef} from 'react';
 import {TextInput} from 'react-native';
 import {useFormik} from 'formik';
 import * as Yup from 'yup';
-import {Button, Container, Box, Text, Input, Footer} from '@components';
+
 import {AuthRoutes, StackNavigationProps} from '@core/types';
+import {Button, Container, Box, Text, Input, Footer} from '@components';
 
 const SignUpSchema = Yup.object().shape({
   email: Yup.string().email().required(),

@@ -1,14 +1,15 @@
 import React, {useState} from 'react';
-
-import {Box, Header} from '@components';
-import {AppRoutes, StackNavigationProps} from '@core/types';
-import {DrawerActions} from '@react-navigation/native';
 import {ScrollView, Dimensions} from 'react-native';
+import {DrawerActions} from '@react-navigation/native';
+
+import {AppRoutes, StackNavigationProps} from '@core/types';
 import {outfits} from '@core/content';
+import {useTheme} from '@config/theme';
+import {Box, Header} from '@components';
 
 import Footer from './components/Footer';
 import Outfit from './components/Outfit';
-import {useTheme} from '@config/theme';
+import TopCurve from './components/TopCurve';
 
 const {width: wWidth} = Dimensions.get('screen');
 
@@ -16,6 +17,7 @@ const FavoritesOutfitScreen = ({
   navigation,
 }: StackNavigationProps<AppRoutes, 'FavoritesOutfits'>) => {
   const theme = useTheme();
+  const [outfitsList, setOutfitsList] = useState(outfits);
   const [footerHeight, setFooterHeight] = useState(0);
   const width = (wWidth - theme.spacing.m * 3) / 2;
   return (
@@ -36,14 +38,14 @@ const FavoritesOutfitScreen = ({
           }}>
           <Box flexDirection="row">
             <Box marginRight="m">
-              {outfits
+              {outfitsList
                 .filter((_, i) => i % 2 !== 0)
                 .map(outfit => (
                   <Outfit outfit={outfit} {...{width}} key={outfit.id} />
                 ))}
             </Box>
             <Box>
-              {outfits
+              {outfitsList
                 .filter((_, i) => i % 2 === 0)
                 .map(outfit => (
                   <Outfit outfit={outfit} {...{width}} key={outfit.id} />
@@ -52,6 +54,7 @@ const FavoritesOutfitScreen = ({
           </Box>
         </ScrollView>
       </Box>
+      <TopCurve {...{footerHeight}} />
       <Box
         position="absolute"
         bottom={0}
@@ -62,7 +65,12 @@ const FavoritesOutfitScreen = ({
             layout: {height},
           },
         }) => setFooterHeight(height)}>
-        <Footer onPress={() => {}} label="Add to favorites" />
+        <Footer
+          onPress={() => {
+            setOutfitsList(outfitsList.filter(_outfits => !_outfits.selected));
+          }}
+          label="Add to favorites"
+        />
       </Box>
     </Box>
   );

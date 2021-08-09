@@ -1,8 +1,8 @@
 import React from 'react';
-
-import {Box} from '@components';
 import {Image, StyleSheet, View} from 'react-native';
+
 import {makeStyle, Theme} from '@config/theme';
+import {Box} from '@components';
 
 const Background = ({}) => {
   const styles = useStyles();
