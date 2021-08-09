@@ -1,10 +1,11 @@
 import React, {useRef, useState} from 'react';
-
 import {Dimensions, StyleSheet, View} from 'react-native';
 import Animated, {interpolateColor, multiply} from 'react-native-reanimated';
+
 import {makeStyle, Theme} from '@config/theme';
 import {AuthRoutes, StackNavigationProps} from '@core/types';
 import {slides} from '@core/content';
+
 import Slide, {SLIDE_HEIGHT} from './components/Slide';
 import Subslide from './components/Subslide';
 import Dot from './components/Dot';

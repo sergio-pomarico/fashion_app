@@ -2,7 +2,6 @@ import React from 'react';
 import {StyleSheet} from 'react-native';
 import Svg, {Path} from 'react-native-svg';
 import {useTheme} from '@config/theme';
-
 interface TopCurveProps {
   footerHeight: number;
 }

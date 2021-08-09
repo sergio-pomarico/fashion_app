@@ -1,6 +1,6 @@
 import React from 'react';
-
 import {Dimensions} from 'react-native';
+
 import {Text, Box} from '@components';
 const {width, height} = Dimensions.get('screen');
 

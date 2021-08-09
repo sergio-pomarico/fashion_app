@@ -1,15 +1,14 @@
 import React, {useCallback, useState} from 'react';
-
-import {Box, Header} from '@components';
-import {AppRoutes, StackNavigationProps} from '@core/types';
 import {DrawerActions} from '@react-navigation/native';
 import {interpolate} from 'react-native-reanimated';
+
+import {AppRoutes, StackNavigationProps} from '@core/types';
+import {cards} from '@core/content';
+import {Box, Header} from '@components';
 
 import Background from './components/Background';
 import Card from './components/Card';
 import Categories from './components/Categories';
-
-import {cards} from '@core/content';
 
 const OutfitIdeasScreen = ({
   navigation,

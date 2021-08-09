@@ -1,15 +1,15 @@
 import React, {useState} from 'react';
-
-import {Box, Header} from '@components';
-import {AppRoutes, StackNavigationProps} from '@core/types';
-import {DrawerActions} from '@react-navigation/native';
 import {ScrollView, Dimensions} from 'react-native';
+import {DrawerActions} from '@react-navigation/native';
+
+import {AppRoutes, StackNavigationProps} from '@core/types';
 import {outfits} from '@core/content';
+import {useTheme} from '@config/theme';
+import {Box, Header} from '@components';
 
 import Footer from './components/Footer';
 import Outfit from './components/Outfit';
 import TopCurve from './components/TopCurve';
-import {useTheme} from '@config/theme';
 
 const {width: wWidth} = Dimensions.get('screen');
 
