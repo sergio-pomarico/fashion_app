@@ -27,3 +27,6 @@ export const generarteSnapPoint = (
   const minDelta = Math.min.apply(null, deltas);
   return points.filter(p => Math.abs(point - p) === minDelta)[0];
 };
+
+export const monthFormater = (date: number) =>
+  Intl.DateTimeFormat('en', {month: 'short'}).format(new Date(date));

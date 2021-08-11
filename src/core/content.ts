@@ -1,3 +1,5 @@
+import {TransactionPoint} from './types';
+
 export const menu = [
   {
     icon: 'zap',
@@ -158,6 +160,45 @@ export const cards = [
     id: 1,
   },
   {
+    id: 0,
+  },
+];
+
+export const transactions: TransactionPoint[] = [
+  {
+    date: new Date('2020-10-01').getTime(),
+    value: 0,
+    color: 'primary',
+    id: 0,
+  },
+  {
+    date: new Date('2020-11-01').getTime(),
+    value: 129.42,
+    color: 'primary',
+    id: 245671,
+  },
+  {
+    date: new Date('2020-12-01').getTime(),
+    value: 281.23,
+    color: 'orange',
+    id: 245672,
+  },
+  {
+    date: new Date('2021-01-01').getTime(),
+    value: 0,
+    color: 'primary',
+    id: 0,
+  },
+  {
+    date: new Date('2021-02-01').getTime(),
+    value: 198.54,
+    color: 'yellow',
+    id: 245673,
+  },
+  {
+    date: new Date('2021-03-01').getTime(),
+    value: 0,
+    color: 'primary',
     id: 0,
   },
 ];
