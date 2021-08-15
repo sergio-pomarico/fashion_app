@@ -166,19 +166,19 @@ export const cards = [
 
 export const transactions: TransactionPoint[] = [
   {
-    date: '2020-11-01T00:00:00.000Z',
+    date: '2020-11-01T00:00:00.000-05:00',
     value: 129.42,
     color: 'primary',
     id: 245671,
   },
   {
-    date: '2020-12-01T00:00:00.000Z',
+    date: '2020-12-01T00:00:00.000-05:00',
     value: 281.23,
     color: 'orange',
     id: 245672,
   },
   {
-    date: '2021-02-01T00:00:00.000Z',
+    date: '2021-02-01T00:00:00.000-05:00',
     value: 198.54,
     color: 'yellow',
     id: 245673,

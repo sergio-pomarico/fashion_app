@@ -9,6 +9,9 @@ import {Box, Header, Text} from '@components';
 import Graph from './components/Graph';
 import Transaction from './components/Transaction';
 
+const intialDate = '2020-10-01T00:00:00.000-05:00';
+const numberOfMonths = 6;
+
 const TransactionHistoryScreen = ({
   navigation,
 }: StackNavigationProps<AppRoutes, 'OutfitIdeas'>) => {
@@ -37,7 +40,7 @@ const TransactionHistoryScreen = ({
             <Text color="primary">$619,19</Text>
           </Box>
         </Box>
-        <Graph points={transactions} />
+        <Graph points={transactions} {...{intialDate, numberOfMonths}} />
         <ScrollView>
           {transactions.map((transaction, index) => (
             <Transaction key={index} {...{transaction}} />

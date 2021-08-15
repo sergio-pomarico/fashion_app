@@ -1,5 +1,6 @@
 import React from 'react';
 import {Dimensions} from 'react-native';
+import {DateTime} from 'luxon';
 
 import {useTheme} from '@config/theme';
 import {dateParser} from '@core/utils';
@@ -11,12 +12,14 @@ import Underlay, {MARGIN} from './Underlay';
 
 interface GraphProps {
   points: TransactionPoint[];
+  intialDate: string;
+  numberOfMonths: number;
 }
 
 const {width: sWidth} = Dimensions.get('screen');
 const aspectRatio = 195 / 305;
 
-const Graph = ({points}: GraphProps) => {
+const Graph = ({points, intialDate, numberOfMonths}: GraphProps) => {
   const theme = useTheme();
   const canvasWidth = sWidth - theme.spacing.m * 2;
   const width = canvasWidth - theme.spacing[MARGIN];
@@ -25,7 +28,7 @@ const Graph = ({points}: GraphProps) => {
 
   const values = points.map(point => point.value);
   const dates = points.map(point => dateParser(point.date));
-  const step = width / points.length;
+  const step = width / numberOfMonths;
 
   const minY = Math.min(...values);
   const maxY = Math.max(...values);
@@ -36,12 +39,15 @@ const Graph = ({points}: GraphProps) => {
       marginTop={MARGIN}
       paddingLeft={MARGIN}
       paddingBottom="l">
-      <Underlay {...{minY, maxY, dates, step}} />
+      <Underlay {...{minY, maxY, dates, step, intialDate, numberOfMonths}} />
       <Box {...{width, height}}>
-        {points.map((point, i) => {
-          if (point.value === 0) {
-            return null;
-          }
+        {points.map(point => {
+          const i = Math.round(
+            DateTime.fromISO(point.date).diff(
+              DateTime.fromISO(intialDate),
+              'month',
+            ).months,
+          );
           return (
             <Box
               key={point.date.toString()}
