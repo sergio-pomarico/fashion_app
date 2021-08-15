@@ -75,6 +75,11 @@ const theme = createTheme({
       lineHeight: 30,
       textAlign: 'center',
     },
+    h3: {
+      fontSize: 16,
+      fontFamily: 'SFProDisplay-Semibold',
+      color: 'secondary',
+    },
     header: {
       fontFamily: 'SFProDisplay-Semibold',
       lineHeight: 24,

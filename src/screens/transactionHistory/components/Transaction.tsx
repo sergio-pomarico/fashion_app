@@ -12,9 +12,13 @@ const Transaction = ({transaction}: TransactionProps) => {
   const theme = useTheme();
   const dotSize = theme.spacing.s * 2;
   return (
-    <Box flexDirection="row" alignItems="center" justifyContent="space-between">
+    <Box
+      marginTop="l"
+      flexDirection="row"
+      justifyContent="space-between"
+      alignItems="center">
       <Box>
-        <Box flexDirection="row" alignItems="center">
+        <Box flexDirection="row" alignItems="center" marginBottom="s">
           <Box
             backgroundColor={transaction.color}
             width={dotSize}
@@ -22,14 +26,16 @@ const Transaction = ({transaction}: TransactionProps) => {
             marginRight="s"
             style={{borderRadius: dotSize / 2}}
           />
-          <Text color="secondary">{`${transaction.id}`}</Text>
+          <Text variant="h3">{`#${transaction.id}`}</Text>
         </Box>
         <Text>{`$${transaction.value} - ${new Date(
           transaction.date,
         ).toLocaleDateString()}`}</Text>
       </Box>
       <Box>
-        <Text color="secondary">See more</Text>
+        <Text color="secondary" variant="button">
+          See more
+        </Text>
       </Box>
     </Box>
   );
