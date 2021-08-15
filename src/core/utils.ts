@@ -30,3 +30,10 @@ export const generarteSnapPoint = (
 
 export const monthFormater = (date: number) =>
   Intl.DateTimeFormat('en', {month: 'short'}).format(new Date(date));
+
+
+/**
+ * return a unix date time
+ * @param date with format 2011-10-05T00:00:00.000Z
+ */
+export const dateParser = (date: string): number => new Date(date).getTime();

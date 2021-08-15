@@ -2,6 +2,7 @@ import React from 'react';
 import {Dimensions} from 'react-native';
 
 import {useTheme} from '@config/theme';
+import {dateParser} from '@core/utils';
 import {TransactionPoint} from '@core/types';
 import {Box} from '@components';
 import {mix} from '@core/utils';
@@ -23,7 +24,7 @@ const Graph = ({points}: GraphProps) => {
   const height = canvasHeight - theme.spacing.l;
 
   const values = points.map(point => point.value);
-  const dates = points.map(point => point.date);
+  const dates = points.map(point => dateParser(point.date));
   const step = width / points.length;
 
   const minY = Math.min(...values);

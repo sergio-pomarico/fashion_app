@@ -25,7 +25,7 @@ export type AppRoutes = {
 };
 
 export interface TransactionPoint {
-  date: number;
+  date: string;
   value: number;
   color: keyof Theme['colors'];
   id: number;
