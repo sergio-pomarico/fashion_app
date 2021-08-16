@@ -1,4 +1,5 @@
 import React from 'react';
+import {DateTime} from 'luxon';
 
 import {TransactionPoint} from '@core/types';
 import {useTheme} from '@config/theme';
@@ -28,9 +29,9 @@ const Transaction = ({transaction}: TransactionProps) => {
           />
           <Text variant="h3">{`#${transaction.id}`}</Text>
         </Box>
-        <Text>{`$${transaction.value} - ${new Date(
+        <Text>{`$${transaction.value} - ${DateTime.fromISO(
           transaction.date,
-        ).toLocaleDateString()}`}</Text>
+        ).toFormat('dd MMMM, yyyy')}`}</Text>
       </Box>
       <Box>
         <Text color="secondary" variant="button">
