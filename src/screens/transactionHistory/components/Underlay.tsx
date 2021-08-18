@@ -28,7 +28,6 @@ const Underlay = ({
   const theme = useTheme();
   const arrMonth = new Array(numberOfMonths).fill(0);
   const minDate = DateTime.fromISO(intialDate);
-  console.log(minDate, arrMonth);
   return (
     <Box style={StyleSheet.absoluteFillObject}>
       <Box flex={1} justifyContent="space-between">
