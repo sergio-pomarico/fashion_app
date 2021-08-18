@@ -31,7 +31,7 @@ const Input = forwardRef<TextInput, InputProps>(
     return (
       <Box
         flexDirection="row"
-        backgroundColor="white"
+        backgroundColor="background"
         height={48}
         borderRadius="s"
         borderWidth={StyleSheet.hairlineWidth}
@@ -56,7 +56,7 @@ const Input = forwardRef<TextInput, InputProps>(
             size={SIZE}
             name={!error ? 'check' : 'x'}
             backgroundColor={colorName}
-            color="white"
+            color="background"
           />
         )}
       </Box>

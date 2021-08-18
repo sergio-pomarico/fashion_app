@@ -19,7 +19,7 @@ const DrawerItem = ({icon, color, label, onPress}: DrawerItemProps) => {
           <RoundedIcon
             name={icon}
             backgroundColor={color}
-            color="white"
+            color="background"
             size={36}
             iconSize={20}
           />

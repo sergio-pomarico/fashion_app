@@ -13,7 +13,7 @@ const Footer = ({label, action, onPress}: FooterProps) => {
       <SocialLogin />
       <Box alignItems="center" marginTop="s">
         <Box flexDirection="row" justifyContent="center" alignItems="center">
-          <Text variant="button" color="white" marginRight="s">
+          <Text variant="button" color="background" marginRight="s">
             {label}
           </Text>
           <Link onPress={onPress} label={action as string} />

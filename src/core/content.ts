@@ -11,25 +11,25 @@ export const menu = [
     icon: 'heart',
     label: 'Favorites Outfits',
     screen: 'FavoritesOutfits',
-    color: 'orange',
+    color: 'drawer1',
   },
   {
     icon: 'user',
     label: 'Edit Profile',
     screen: 'EditProfile',
-    color: 'yellow',
+    color: 'drawer2',
   },
   {
     icon: 'clock',
     label: 'Transactions History',
     screen: 'TransactionsHistory',
-    color: 'pink',
+    color: 'drawer3',
   },
   {
     icon: 'settings',
     label: 'Notifications Settings',
     screen: 'NotificationsSettings',
-    color: 'violet',
+    color: 'drawer4',
   },
   {
     icon: 'log-out',
@@ -174,13 +174,13 @@ export const transactions: TransactionPoint[] = [
   {
     date: '2020-12-01T00:00:00.000-05:00',
     value: 281.23,
-    color: 'orange',
+    color: 'graph1',
     id: 245672,
   },
   {
     date: '2021-02-01T00:00:00.000-05:00',
     value: 198.54,
-    color: 'yellow',
+    color: 'graph2',
     id: 245673,
   },
 ];

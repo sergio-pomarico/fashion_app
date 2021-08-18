@@ -18,7 +18,7 @@ const OutfitIdeasScreen = ({
     setCurrentIndex(prev => prev + 1);
   }, []);
   return (
-    <Box flex={1} backgroundColor="white">
+    <Box flex={1} backgroundColor="background">
       <Header
         title={'outfit ideas'}
         left={{
