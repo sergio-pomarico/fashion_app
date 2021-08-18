@@ -1,4 +1,9 @@
-import {createTheme, useTheme as useReTheme} from '@shopify/restyle';
+import React, {ReactNode} from 'react';
+import {
+  createTheme,
+  useTheme as useReTheme,
+  ThemeProvider as ReStyleThemeProvider,
+} from '@shopify/restyle';
 import {ImageStyle, TextStyle, ViewStyle, FlexStyle} from 'react-native';
 
 type NamedStyles<T> = {
@@ -29,7 +34,7 @@ const theme = createTheme({
     primaryLight: palette.primaryLight,
     secondary: palette.secondary,
     text: palette.text,
-    white: palette.white,
+    background: palette.white,
     grey: palette.grey,
     darkGrey: palette.darkGrey,
     arena: palette.arena,
@@ -99,6 +104,10 @@ const theme = createTheme({
     },
   },
 });
+
+export const ThemeProvider = ({children}: {children: ReactNode}) => (
+  <ReStyleThemeProvider {...{theme}}>{children}</ReStyleThemeProvider>
+);
 
 export type Theme = typeof theme;
 export const useTheme = () => useReTheme<Theme>();
