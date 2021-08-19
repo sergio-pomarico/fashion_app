@@ -7,7 +7,7 @@ const WelcomeScreen = ({
   navigation,
 }: StackNavigationProps<AuthRoutes, 'Welcome'>) => {
   return (
-    <Box flex={1} backgroundColor="white">
+    <Box flex={1} backgroundColor="background">
       <Box flex={1} backgroundColor="arena" borderBottomRightRadius="xl" />
       <Box flex={1} borderTopLeftRadius="xl">
         <Box
@@ -20,7 +20,7 @@ const WelcomeScreen = ({
         />
         <Box
           borderTopLeftRadius="xl"
-          backgroundColor="white"
+          backgroundColor="background"
           flex={1}
           justifyContent="space-evenly"
           alignItems="center"

@@ -25,7 +25,7 @@ const Drawer = ({
   const theme = useTheme();
   return (
     <Box flex={1}>
-      <Box flex={0.2} backgroundColor="white">
+      <Box flex={0.2} backgroundColor="background">
         <Box
           backgroundColor="secondary"
           borderBottomRightRadius="xl"
@@ -57,7 +57,7 @@ const Drawer = ({
           top={0}
           justifyContent="center"
           padding="xl"
-          backgroundColor="white"
+          backgroundColor="background"
           borderTopLeftRadius="xl"
           borderBottomRightRadius="xl">
           <Box
@@ -88,7 +88,7 @@ const Drawer = ({
       </Box>
       <Box
         flex={0.1}
-        backgroundColor="white"
+        backgroundColor="background"
         borderTopLeftRadius="xl"
         width={DRAWER_WIDTH}
         overflow="hidden">

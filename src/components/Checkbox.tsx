@@ -15,7 +15,7 @@ const Checkbox = ({label}: CheckboxProps) => {
       <TouchableOpacity onPress={() => setChecked(!checked)}>
         <Box
           borderRadius="s"
-          backgroundColor={checked ? 'primary' : 'white'}
+          backgroundColor={checked ? 'primary' : 'background'}
           width={20}
           height={20}
           alignItems="center"
@@ -23,7 +23,7 @@ const Checkbox = ({label}: CheckboxProps) => {
           borderColor="primary"
           borderWidth={StyleSheet.hairlineWidth}
           marginRight="s">
-          <Icon name="check" color="white" />
+          <Icon name="check" color="background" />
         </Box>
       </TouchableOpacity>
       <Text variant="body">{label}</Text>

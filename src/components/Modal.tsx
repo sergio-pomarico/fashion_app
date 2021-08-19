@@ -17,7 +17,7 @@ const Modal = ({visible, onClose, children}: ModalProps) => {
       <Box flexDirection="row" justifyContent="center">
         <RoundedIcon
           size={SIZE}
-          backgroundColor="white"
+          backgroundColor="background"
           name="x"
           color="secondary"
           iconSize={32}

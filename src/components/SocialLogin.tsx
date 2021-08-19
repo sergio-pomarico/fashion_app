@@ -62,7 +62,7 @@ const SocialIcon = ({children}: SocialIconProps) => {
       width={SIZE}
       height={SIZE}
       borderRadius="l"
-      backgroundColor="white"
+      backgroundColor="background"
       justifyContent="center"
       alignItems="center"
       marginHorizontal="s">

@@ -27,3 +27,9 @@ export const generarteSnapPoint = (
   const minDelta = Math.min.apply(null, deltas);
   return points.filter(p => Math.abs(point - p) === minDelta)[0];
 };
+
+/**
+ * return a unix date time
+ * @param date with format 2011-10-05T00:00:00.000Z
+ */
+export const dateParser = (date: string): number => new Date(date).getTime();

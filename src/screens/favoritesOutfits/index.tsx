@@ -21,7 +21,7 @@ const FavoritesOutfitScreen = ({
   const [footerHeight, setFooterHeight] = useState(0);
   const width = (wWidth - theme.spacing.m * 3) / 2;
   return (
-    <Box flex={1} backgroundColor="white">
+    <Box flex={1} backgroundColor="background">
       <Header
         title={'Favorites Outfits'}
         left={{

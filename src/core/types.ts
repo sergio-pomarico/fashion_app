@@ -1,5 +1,6 @@
 import {ParamListBase, RouteProp} from '@react-navigation/native';
 import {StackNavigationProp} from '@react-navigation/stack';
+import {Theme} from '@config/theme';
 
 export interface StackNavigationProps<
   ParamList extends ParamListBase,
@@ -22,3 +23,10 @@ export type AppRoutes = {
   FavoritesOutfits: undefined;
   TransactionsHistory: undefined;
 };
+
+export interface TransactionPoint {
+  date: string;
+  value: number;
+  color: keyof Theme['colors'];
+  id: number;
+}
