@@ -1,5 +1,11 @@
 import React from 'react';
 import {Dimensions} from 'react-native';
+import {useFocusEffect} from '@react-navigation/native';
+import Animated, {
+  useSharedValue,
+  withTiming,
+  useAnimatedStyle,
+} from 'react-native-reanimated';
 import {DateTime} from 'luxon';
 
 import {useTheme} from '@config/theme';
@@ -18,8 +24,10 @@ interface GraphProps {
 
 const {width: sWidth} = Dimensions.get('screen');
 const aspectRatio = 195 / 305;
+const AnimatedBox = Animated.createAnimatedComponent(Box);
 
 const Graph = ({points, intialDate, numberOfMonths}: GraphProps) => {
+  const transition = useSharedValue(0);
   const theme = useTheme();
   const canvasWidth = sWidth - theme.spacing.m * 2;
   const width = canvasWidth - theme.spacing[MARGIN];
@@ -32,6 +40,11 @@ const Graph = ({points, intialDate, numberOfMonths}: GraphProps) => {
 
   const minY = Math.min(...values);
   const maxY = Math.max(...values);
+
+  useFocusEffect(() => {
+    transition.value = withTiming(1, {duration: 650});
+    return () => (transition.value = 0);
+  });
   return (
     <Box
       height={canvasHeight}
@@ -48,14 +61,24 @@ const Graph = ({points, intialDate, numberOfMonths}: GraphProps) => {
               'month',
             ).months,
           );
+          const total = mix(point.value / maxY, 0, height);
+          // eslint-disable-next-line react-hooks/rules-of-hooks
+          const style = useAnimatedStyle(() => {
+            const currentHeight = total * transition.value;
+            const translateY = (total - currentHeight) / 2;
+            return {
+              transform: [{translateY}, {scaleY: transition.value}],
+            };
+          });
           return (
-            <Box
+            <AnimatedBox
               key={point.date.toString()}
               position="absolute"
               left={i * step}
               bottom={0}
               width={step}
-              height={mix(point.value / maxY, 0, height)}>
+              style={style}
+              height={total}>
               <Box
                 position="absolute"
                 left={theme.spacing.m}
@@ -77,7 +100,7 @@ const Graph = ({points, intialDate, numberOfMonths}: GraphProps) => {
                 borderRadius="m"
                 height={32}
               />
-            </Box>
+            </AnimatedBox>
           );
         })}
       </Box>
