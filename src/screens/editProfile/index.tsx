@@ -4,6 +4,8 @@ import {DrawerActions} from '@react-navigation/native';
 
 import {tabs} from '@core/content';
 import {Box, Header, Tabs, Text} from '@components';
+import Configuration from './components/Configuration';
+import PersonalInfo from './components/PersonalInfo';
 
 const borderRadius = 50;
 
@@ -59,7 +61,10 @@ const EditProfileScreen = ({
               mike@flexinstudio.com
             </Text>
           </Box>
-          <Tabs {...{tabs}} />
+          <Tabs {...{tabs}}>
+            <Configuration />
+            <PersonalInfo />
+          </Tabs>
         </Box>
       </Box>
     </Box>
