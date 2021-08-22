@@ -9,7 +9,7 @@ interface HeaderProps {
     icon: string;
     onPress: () => void;
   };
-  right: {
+  right?: {
     icon: string;
     onPress: () => void;
   };
@@ -39,14 +39,18 @@ const Header = ({title, left, right, dark}: HeaderProps) => {
       <Text {...{color}} variant="header">
         {title?.toUpperCase()}
       </Text>
-      <TouchableOpacity onPress={right.onPress}>
-        <RoundedIcon
-          name={right.icon}
-          {...{color, backgroundColor}}
-          iconSize={24}
-          size={44}
-        />
-      </TouchableOpacity>
+      {right ? (
+        <TouchableOpacity onPress={right.onPress}>
+          <RoundedIcon
+            name={right.icon}
+            {...{color, backgroundColor}}
+            iconSize={24}
+            size={44}
+          />
+        </TouchableOpacity>
+      ) : (
+        <Box flex={0.3} />
+      )}
     </Box>
   );
 };

@@ -22,6 +22,7 @@ export type AppRoutes = {
   OutfitIdeas: undefined;
   FavoritesOutfits: undefined;
   TransactionsHistory: undefined;
+  EditProfile: undefined;
 };
 
 export interface TransactionPoint {

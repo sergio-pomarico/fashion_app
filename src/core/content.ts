@@ -184,3 +184,14 @@ export const transactions: TransactionPoint[] = [
     id: 245673,
   },
 ];
+
+export const tabs = [
+  {
+    id: 'configuration',
+    title: 'Configuration',
+  },
+  {
+    id: 'info',
+    title: 'Personal Info',
+  },
+];
