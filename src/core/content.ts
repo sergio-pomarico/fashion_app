@@ -184,3 +184,46 @@ export const transactions: TransactionPoint[] = [
     id: 245673,
   },
 ];
+
+export const tabs = [
+  {
+    id: 'configuration',
+    title: 'Configuration',
+  },
+  {
+    id: 'info',
+    title: 'Personal Info',
+  },
+];
+
+export const outfitType = [
+  {value: 'men', label: 'For men'},
+  {value: 'women', label: 'For women'},
+  {value: 'both', label: 'For both'},
+];
+
+export const sizes = [
+  {value: 's'},
+  {value: 'm'},
+  {value: 'l'},
+  {value: 'xl'},
+  {value: 'xxl'},
+];
+
+export const colors = [
+  {value: '#0C0D34'},
+  {value: '#FF0058'},
+  {value: '#50B9DE'},
+  {value: '#00D99A'},
+  {value: '#FE5E33'},
+];
+
+export const preferredBrands = [
+  {value: 'adidas', label: 'Adidas'},
+  {value: 'nike', label: 'Nike'},
+  {value: 'converse', label: 'Converse'},
+  {value: 'tommy-hilfiger', label: 'Tommy Hilfiger'},
+  {value: 'billionaire-boys-club', label: 'Billionaire Boys Club'},
+  {value: 'jordan', label: 'Jordan'},
+  {value: 'le-coq-sportif', label: 'Le Coq Sportif'},
+];

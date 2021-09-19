@@ -4,6 +4,7 @@ import {createDrawerNavigator} from '@react-navigation/drawer';
 import OutfitIdeasScreen from '@screens/outfitIdeas';
 import FavoritesOutfitScreen from '@screens/favoritesOutfits';
 import TransactionHistoryScreen from '@screens/transactionHistory';
+import EditProfileScreen from '@screens/editProfile';
 import {Drawer, DRAWER_WIDTH} from '@components';
 
 const AppDrawer = createDrawerNavigator<AppRoutes>();
@@ -21,6 +22,7 @@ const AppStackNavigation = () => (
       name="TransactionsHistory"
       component={TransactionHistoryScreen}
     />
+    <AppDrawer.Screen name="EditProfile" component={EditProfileScreen} />
   </AppDrawer.Navigator>
 );
 
