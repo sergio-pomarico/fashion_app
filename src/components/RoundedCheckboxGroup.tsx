@@ -3,7 +3,7 @@ import {StyleSheet, TouchableOpacity, View} from 'react-native';
 import Icon from 'react-native-vector-icons/Feather';
 
 import {Box, Text} from '@components';
-import theme from '@config/theme';
+import {useTheme, makeStyle, Theme} from '@config/theme';
 
 interface RoundedCheckboxGroupProps {
   options: {value: string}[];
@@ -18,6 +18,8 @@ const RoundedCheckboxGroup = ({
   isValueColor = false,
 }: RoundedCheckboxGroupProps) => {
   const [selectedValues, setSelectedValues] = useState<string[]>([]);
+  const styles = useStyles();
+  const theme = useTheme();
   return (
     <Box flexDirection="row" flexWrap="wrap" marginTop="m">
       {options.map(({value}) => {
@@ -63,7 +65,7 @@ const RoundedCheckboxGroup = ({
   );
 };
 
-const styles = StyleSheet.create({
+const useStyles = makeStyle((theme: Theme) => ({
   container: {
     width: OUTER_RADIUS * 2,
     height: OUTER_RADIUS * 2,
@@ -84,6 +86,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-});
+}));
 
 export default RoundedCheckboxGroup;
