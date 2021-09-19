@@ -13,3 +13,4 @@ export {default as Drawer, DRAWER_WIDTH} from './Drawer';
 export {default as Header} from './Header';
 export {default as Tabs} from './Tabs';
 export {default as CheckboxGroup} from './CheckboxGroup';
+export {default as RoundedCheckboxGroup} from './RoundedCheckboxGroup';
