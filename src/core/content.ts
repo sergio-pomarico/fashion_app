@@ -202,6 +202,11 @@ export const outfitType = [
   {value: 'both', label: 'For both'},
 ];
 
+export const genders = [
+  {value: 'male', label: 'Male'},
+  {value: 'female', label: 'Female'},
+];
+
 export const sizes = [
   {value: 's'},
   {value: 'm'},
