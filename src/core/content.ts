@@ -28,7 +28,7 @@ export const menu = [
   {
     icon: 'settings',
     label: 'Notifications Settings',
-    screen: 'NotificationsSettings',
+    screen: 'Settings',
     color: 'drawer4',
   },
   {
