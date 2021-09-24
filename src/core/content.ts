@@ -28,7 +28,7 @@ export const menu = [
   {
     icon: 'settings',
     label: 'Notifications Settings',
-    screen: 'NotificationsSettings',
+    screen: 'Settings',
     color: 'drawer4',
   },
   {
@@ -200,6 +200,11 @@ export const outfitType = [
   {value: 'men', label: 'For men'},
   {value: 'women', label: 'For women'},
   {value: 'both', label: 'For both'},
+];
+
+export const genders = [
+  {value: 'male', label: 'Male'},
+  {value: 'female', label: 'Female'},
 ];
 
 export const sizes = [
