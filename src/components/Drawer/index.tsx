@@ -42,7 +42,10 @@ const Drawer = ({
               icon: 'x',
               onPress: () => navigation.dispatch(DrawerActions.toggleDrawer()),
             }}
-            right={{icon: 'shopping-bag', onPress: () => {}}}
+            right={{
+              icon: 'shopping-bag',
+              onPress: () => navigation.navigate('Cart'),
+            }}
           />
         </Box>
       </Box>

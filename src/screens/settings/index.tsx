@@ -20,7 +20,10 @@ const SettingsScreen = ({
               icon: 'menu',
               onPress: () => navigation.dispatch(DrawerActions.toggleDrawer()),
             }}
-            right={{icon: 'shopping-bag', onPress: () => {}}}
+            right={{
+              icon: 'shopping-bag',
+              onPress: () => navigation.navigate('Cart'),
+            }}
           />
           <Box padding="m">
             <Notification

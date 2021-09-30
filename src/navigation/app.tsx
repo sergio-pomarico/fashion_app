@@ -6,6 +6,7 @@ import FavoritesOutfitScreen from '@screens/favoritesOutfits';
 import TransactionHistoryScreen from '@screens/transactionHistory';
 import EditProfileScreen from '@screens/editProfile';
 import SettingsScreen from '@screens/settings';
+import ShoppingCartScreen from '@screens/cart';
 import {Drawer, DRAWER_WIDTH} from '@components';
 
 const AppDrawer = createDrawerNavigator<AppRoutes>();
@@ -25,6 +26,7 @@ const AppStackNavigation = () => (
     />
     <AppDrawer.Screen name="EditProfile" component={EditProfileScreen} />
     <AppDrawer.Screen name="Settings" component={SettingsScreen} />
+    <AppDrawer.Screen name="Cart" component={ShoppingCartScreen} />
   </AppDrawer.Navigator>
 );
 
