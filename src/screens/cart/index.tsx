@@ -1,22 +1,16 @@
 import React from 'react';
+
 import {AppRoutes, StackNavigationProps} from '@core/types';
-import {DrawerActions} from '@react-navigation/native';
 
-import {Box, Header} from '@components';
+import {Box} from '@components';
 
-const ShoppingCartScreen = ({
-  navigation,
-}: StackNavigationProps<AppRoutes, 'Cart'>) => {
+import ShoppingCartContainerProps from './components/Container';
+
+const ShoppingCartScreen = ({}: StackNavigationProps<AppRoutes, 'Cart'>) => {
   return (
-    <Box flex={1} backgroundColor="background">
-      <Header
-        title={'Shopping Cart'}
-        left={{
-          icon: 'menu',
-          onPress: () => navigation.dispatch(DrawerActions.toggleDrawer()),
-        }}
-      />
-    </Box>
+    <ShoppingCartContainerProps>
+      <Box />
+    </ShoppingCartContainerProps>
   );
 };
 
