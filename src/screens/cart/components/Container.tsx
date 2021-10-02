@@ -1,5 +1,5 @@
 import React, {ReactNode} from 'react';
-import {Dimensions} from 'react-native';
+import {View, Dimensions} from 'react-native';
 import Animated, {
   useAnimatedGestureHandler,
   useAnimatedStyle,
@@ -11,14 +11,14 @@ import {
   PanGestureHandlerGestureEvent,
 } from 'react-native-gesture-handler';
 
-import {makeStyle, Theme} from '@config/theme';
+import {aspectRatio, makeStyle, Theme} from '@config/theme';
 import {generarteSnapPoint, clamp} from '@core/utils';
 
 import {Box} from '@components';
 
 const {width} = Dimensions.get('screen');
-const height = (682 * width) / 375;
-const minHeight = (228 * width) / 375;
+const height = 682 * aspectRatio;
+const minHeight = 228 * aspectRatio;
 const snapPoints = [-(height - minHeight), 0];
 
 type Context = {
@@ -53,7 +53,7 @@ const ShoppingCartContainer = ({children}: ShoppingCartContainerProps) => {
       const dest = generarteSnapPoint(translateY.value, velocityY, snapPoints);
       translateY.value = withSpring(dest, {
         velocity: velocityY,
-        overshootClamping: true,
+        //overshootClamping: true,
       });
     },
   });
@@ -69,6 +69,14 @@ const ShoppingCartContainer = ({children}: ShoppingCartContainerProps) => {
       <PanGestureHandler {...{onGestureEvent}}>
         <Animated.View style={[styles.bottomSheet, animatedStyle]}>
           {children}
+          <View style={styles.noScrollable}>
+            <Box
+              height={5 * aspectRatio}
+              width={60 * aspectRatio}
+              backgroundColor="grey"
+              borderRadius="s"
+            />
+          </View>
         </Animated.View>
       </PanGestureHandler>
     </Box>
@@ -85,6 +93,18 @@ const useStyles = makeStyle((theme: Theme) => ({
     position: 'absolute',
     rigth: 0,
     top: 0,
+    width: width,
+  },
+  noScrollable: {
+    alignItems: 'center',
+    borderBottomLeftRadius: theme.spacing.xl,
+    borderBottomRightRadius: theme.spacing.xl,
+    bottom: 0,
+    height: theme.spacing.xl,
+    justifyContent: 'center',
+    left: 0,
+    position: 'absolute',
+    rigth: 0,
     width: width,
   },
 }));
