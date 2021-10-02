@@ -4,11 +4,20 @@ import {
   useTheme as useReTheme,
   ThemeProvider as ReStyleThemeProvider,
 } from '@shopify/restyle';
-import {ImageStyle, TextStyle, ViewStyle, FlexStyle} from 'react-native';
+import {
+  ImageStyle,
+  TextStyle,
+  ViewStyle,
+  FlexStyle,
+  Dimensions,
+} from 'react-native';
 
 type NamedStyles<T> = {
   [P in keyof T]: ViewStyle | TextStyle | ImageStyle | FlexStyle;
 };
+
+const {width} = Dimensions.get('screen');
+export const aspectRatio = width / 375;
 
 const palette = {
   primary: '#2CB9B0',
@@ -26,6 +35,7 @@ const palette = {
   pink: '#FF87A2',
   violet: '#442CB9',
   lightBlue: '#BFEAF5',
+  transparent: 'transpatent',
 };
 
 const theme = createTheme({
@@ -47,6 +57,7 @@ const theme = createTheme({
     drawer4: palette.violet,
     lightGrey: palette.lightGrey,
     lightBlue: palette.lightBlue,
+    transparent: palette.transparent,
   },
   spacing: {
     s: 8,

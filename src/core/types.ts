@@ -24,6 +24,7 @@ export type AppRoutes = {
   TransactionsHistory: undefined;
   EditProfile: undefined;
   Settings: undefined;
+  Cart: undefined;
 };
 
 export interface TransactionPoint {

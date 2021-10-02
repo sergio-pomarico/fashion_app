@@ -28,7 +28,7 @@ const TransactionHistoryScreen = ({
           icon: 'menu',
           onPress: () => navigation.dispatch(DrawerActions.toggleDrawer()),
         }}
-        right={{icon: 'share', onPress: () => {}}}
+        right={{icon: 'share', onPress: () => navigation.navigate('Cart')}}
       />
       <Box padding="m" flex={1}>
         <Box
