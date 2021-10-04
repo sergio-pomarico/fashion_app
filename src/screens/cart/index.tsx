@@ -31,27 +31,42 @@ const ShoppingCartScreen = ({
             }}
           />
         </Box>
-        <Box width={width} height={height}>
-          <Svg viewBox="0 0 375 100" style={StyleSheet.absoluteFill}>
-            <Path d={d} fill={theme.colors.primary} />
-          </Svg>
-          <Text variant="h2" color="background" textAlign="center">
-            3 Items Added
-          </Text>
+        <Box flex={1}>
+          <ScrollView
+            style={{
+              borderBottomLeftRadius: theme.spacing.xl,
+              borderBottomRightRadius: theme.spacing.xl,
+            }}
+            contentContainerStyle={{paddingVertical: 50 * aspectRatio}}
+            showsVerticalScrollIndicator={false}>
+            <Item />
+            <Item />
+            <Item />
+            <Item />
+            <Item />
+          </ScrollView>
+          <Box width={width} height={height} style={styles.curve}>
+            <Svg viewBox="0 0 375 100" style={StyleSheet.absoluteFill}>
+              <Path d={d} fill={theme.colors.primary} />
+            </Svg>
+            <Text variant="h2" color="background" textAlign="center">
+              3 Items Added
+            </Text>
+          </Box>
         </Box>
-        <ScrollView
-          style={{
-            borderBottomLeftRadius: theme.spacing.xl,
-            borderBottomRightRadius: theme.spacing.xl,
-          }}>
-          <Item />
-          <Item />
-          <Item />
-          <Item />
-        </ScrollView>
       </Box>
     </ShoppingCartContainerProps>
   );
 };
+
+const styles = StyleSheet.create({
+  curve: {
+    top: 0,
+    position: 'absolute',
+    left: 0,
+    right: 0,
+    height,
+  },
+});
 
 export default ShoppingCartScreen;
