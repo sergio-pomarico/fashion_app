@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {Dimensions, ScrollView, StyleSheet} from 'react-native';
 import Svg, {Path} from 'react-native-svg';
 
@@ -19,6 +19,7 @@ const ShoppingCartScreen = ({
   navigation,
 }: StackNavigationProps<AppRoutes, 'Cart'>) => {
   const theme = useTheme();
+  const [items, setItems] = useState(shoppingCartItems);
   return (
     <ShoppingCartContainerProps>
       <Box flex={1}>
@@ -40,8 +41,15 @@ const ShoppingCartScreen = ({
             }}
             contentContainerStyle={{paddingVertical: 50 * aspectRatio}}
             showsVerticalScrollIndicator={false}>
-            {shoppingCartItems.map(item => (
-              <Item item={item} key={item.id.toString()} />
+            {items.map((item, index) => (
+              <Item
+                item={item}
+                key={item.id.toString()}
+                onDelete={() => {
+                  items.splice(index, 1);
+                  setItems(items.concat());
+                }}
+              />
             ))}
           </ScrollView>
           <Box width={width} height={height} style={styles.curve}>

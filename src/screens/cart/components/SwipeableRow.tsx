@@ -7,6 +7,7 @@ import {
   PanGestureHandlerGestureEvent,
 } from 'react-native-gesture-handler';
 import Animated, {
+  runOnJS,
   useAnimatedGestureHandler,
   useAnimatedStyle,
   useSharedValue,
@@ -20,12 +21,13 @@ type Context = {
 
 interface SwipeableRowProps {
   children: ReactNode;
+  onDelete: () => void;
 }
 
 const {width} = Dimensions.get('screen');
 const finalDestination = width;
 
-const SwipeableRow = ({children}: SwipeableRowProps) => {
+const SwipeableRow = ({children, onDelete}: SwipeableRowProps) => {
   const snapPoints = [-85 * aspectRatio, 0, width];
 
   const theme = useTheme();
@@ -50,6 +52,7 @@ const SwipeableRow = ({children}: SwipeableRowProps) => {
         },
         () => {
           if (dest === finalDestination) {
+            runOnJS(onDelete)();
           }
         },
       );

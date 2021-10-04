@@ -8,11 +8,12 @@ import SwipeableRow from './SwipeableRow';
 
 interface ItemProps {
   item: typeof shoppingCartItems[0];
+  onDelete: () => void;
 }
 
-const Item = ({item}: ItemProps) => {
+const Item = ({item, onDelete}: ItemProps) => {
   return (
-    <SwipeableRow>
+    <SwipeableRow onDelete={onDelete}>
       <Box padding="m" flexDirection="row">
         <Box
           width={120}
