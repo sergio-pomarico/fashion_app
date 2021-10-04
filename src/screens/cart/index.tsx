@@ -6,6 +6,7 @@ import {AppRoutes, StackNavigationProps} from '@core/types';
 
 import {Box, Header, Text} from '@components';
 import {aspectRatio, useTheme} from '@config/theme';
+import {shoppingCartItems} from '@core/content';
 
 import ShoppingCartContainerProps from './components/Container';
 import Item from './components/Item';
@@ -39,11 +40,9 @@ const ShoppingCartScreen = ({
             }}
             contentContainerStyle={{paddingVertical: 50 * aspectRatio}}
             showsVerticalScrollIndicator={false}>
-            <Item />
-            <Item />
-            <Item />
-            <Item />
-            <Item />
+            {shoppingCartItems.map(item => (
+              <Item item={item} key={item.id.toString()} />
+            ))}
           </ScrollView>
           <Box width={width} height={height} style={styles.curve}>
             <Svg viewBox="0 0 375 100" style={StyleSheet.absoluteFill}>

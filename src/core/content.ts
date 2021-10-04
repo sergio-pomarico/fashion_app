@@ -232,3 +232,30 @@ export const preferredBrands = [
   {value: 'jordan', label: 'Jordan'},
   {value: 'le-coq-sportif', label: 'Le Coq Sportif'},
 ];
+
+export const shoppingCartItems = [
+  {
+    id: 1,
+    sizes: ['M', 'L'],
+    name: 'Short Sleeve Organic Top',
+    price: '$29,99',
+  },
+  {
+    id: 2,
+    sizes: ['M', 'L'],
+    name: 'Short Sleeve Organic Top',
+    price: '$29,99',
+  },
+  {
+    id: 3,
+    sizes: ['M', 'L'],
+    name: 'Short Sleeve Organic Top',
+    price: '$29,99',
+  },
+  {
+    id: 4,
+    sizes: ['M', 'L'],
+    name: 'Short Sleeve Organic Top',
+    price: '$29,99',
+  },
+];
