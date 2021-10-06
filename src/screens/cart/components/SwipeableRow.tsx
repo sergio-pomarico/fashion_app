@@ -13,6 +13,7 @@ import Animated, {
   useSharedValue,
   withSpring,
 } from 'react-native-reanimated';
+import {Box, RoundedIcon, Text} from '@components';
 
 type Context = {
   offsetX: number;
@@ -66,9 +67,47 @@ const SwipeableRow = ({children, onDelete}: SwipeableRowProps) => {
     };
   });
 
+  const editStyle = useAnimatedStyle(() => {
+    return {
+      opacity: translateX.value < 0 ? 1 : 0,
+      backgroundColor: '#BFEAF5',
+    };
+  });
+
+  const deleteStyle = useAnimatedStyle(() => {
+    return {
+      alignContent: 'center',
+      backgroundColor: '#FFD7D8',
+      justifyContent: 'center',
+      opacity: translateX.value > 0 ? 1 : 0,
+    };
+  });
+
   return (
     <View>
-      <View style={{...StyleSheet.absoluteFillObject}} />
+      <Animated.View style={[StyleSheet.absoluteFillObject, deleteStyle]}>
+        <Box width={120}>
+          <Text color="danger" variant="header" textAlign="center">
+            Remove
+          </Text>
+        </Box>
+      </Animated.View>
+      <Animated.View style={[StyleSheet.absoluteFill, editStyle]}>
+        <Box flex={1} justifyContent="center" alignItems="flex-end" padding="m">
+          <RoundedIcon
+            name="plus"
+            backgroundColor="primary"
+            color="background"
+            size={24}
+          />
+          <RoundedIcon
+            name="minus"
+            backgroundColor="danger"
+            color="background"
+            size={24}
+          />
+        </Box>
+      </Animated.View>
       <PanGestureHandler {...{onGestureEvent}}>
         <Animated.View style={animatedStyle}>{children}</Animated.View>
       </PanGestureHandler>
