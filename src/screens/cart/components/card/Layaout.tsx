@@ -10,13 +10,15 @@ interface LayoutProps {
   backgroundColor?: BoxProps<Theme>['backgroundColor'];
 }
 
+export const CARD_HEIGHT = 160;
+
 const Add = ({children, onPress, backgroundColor}: LayoutProps) => {
   return (
     <TouchableWithoutFeedback onPress={onPress}>
       <Box
         borderRadius="m"
-        height={160}
-        marginLeft="m"
+        height={CARD_HEIGHT}
+        marginRight="m"
         width={120}
         {...{backgroundColor}}>
         {children}

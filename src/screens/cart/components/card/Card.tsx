@@ -26,7 +26,6 @@ const Card = ({card, selected, onSelect}: CardProps) => {
           style={isVisa ? styles.visa : styles.masterCard}
           source={isVisa ? visaLogo : masterCardLogo}
         />
-
         <Text
           variant="h3"
           marginVertical="m"
