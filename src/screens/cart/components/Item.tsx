@@ -5,6 +5,7 @@ import {Box, Text} from '@components';
 import {shoppingCartItems} from '@core/content';
 
 import SwipeableRow from './SwipeableRow';
+import {useTheme} from '@config/theme';
 
 interface ItemProps {
   item: typeof shoppingCartItems[0];
@@ -12,8 +13,10 @@ interface ItemProps {
 }
 
 const Item = ({item, onDelete}: ItemProps) => {
+  const theme = useTheme();
+  const height = 120 + theme.spacing.m * 2;
   return (
-    <SwipeableRow onDelete={onDelete}>
+    <SwipeableRow onDelete={onDelete} {...{height}}>
       <Box padding="m" flexDirection="row">
         <Box
           width={120}

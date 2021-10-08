@@ -12,6 +12,7 @@ import Animated, {
   useAnimatedStyle,
   useSharedValue,
   withSpring,
+  withTiming,
 } from 'react-native-reanimated';
 import {Box, RoundedIcon, Text} from '@components';
 
@@ -23,13 +24,15 @@ type Context = {
 interface SwipeableRowProps {
   children: ReactNode;
   onDelete: () => void;
+  height: number;
 }
 
 const {width} = Dimensions.get('screen');
 const finalDestination = width;
 
-const SwipeableRow = ({children, onDelete}: SwipeableRowProps) => {
+const SwipeableRow = ({children, onDelete, height}: SwipeableRowProps) => {
   const snapPoints = [-85 * aspectRatio, 0, width];
+  const defaultHeight = useSharedValue(height);
 
   const theme = useTheme();
   const translateX = useSharedValue(0);
@@ -50,10 +53,19 @@ const SwipeableRow = ({children, onDelete}: SwipeableRowProps) => {
         dest,
         {
           velocity: velocityX,
+          overshootClamping: true,
         },
         () => {
           if (dest === finalDestination) {
-            runOnJS(onDelete)();
+            defaultHeight.value = withTiming(
+              0,
+              {
+                duration: 250,
+              },
+              () => {
+                runOnJS(onDelete)();
+              },
+            );
           }
         },
       );
@@ -63,6 +75,7 @@ const SwipeableRow = ({children, onDelete}: SwipeableRowProps) => {
   const animatedStyle = useAnimatedStyle(() => {
     return {
       backgroundColor: theme.colors.background,
+      height: defaultHeight.value,
       transform: [{translateX: translateX.value}],
     };
   });
