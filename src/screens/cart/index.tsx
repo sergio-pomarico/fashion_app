@@ -8,8 +8,9 @@ import {Box, Header, Text} from '@components';
 import {aspectRatio, useTheme} from '@config/theme';
 import {shoppingCartItems} from '@core/content';
 
-import ShoppingCartContainerProps from './components/Container';
+import ShoppingCartContainer from './components/Container';
 import Item from './components/Item';
+import Checkout from './components/Checkout';
 
 const d = 'M 0 0 A 50 50 0 0 0 50 50 H 325 A 50 50 0 0 1 375 100 V 0 Z';
 const {width} = Dimensions.get('screen');
@@ -21,7 +22,7 @@ const ShoppingCartScreen = ({
   const theme = useTheme();
   const [items, setItems] = useState(shoppingCartItems);
   return (
-    <ShoppingCartContainerProps>
+    <ShoppingCartContainer Checkout={Checkout}>
       <Box flex={1}>
         <Box backgroundColor="primary">
           <Header
@@ -62,7 +63,7 @@ const ShoppingCartScreen = ({
           </Box>
         </Box>
       </Box>
-    </ShoppingCartContainerProps>
+    </ShoppingCartContainer>
   );
 };
 

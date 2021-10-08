@@ -1,4 +1,4 @@
-import React, {ReactNode} from 'react';
+import React, {FC, ReactNode} from 'react';
 import {View, Dimensions} from 'react-native';
 import Animated, {
   useAnimatedGestureHandler,
@@ -28,9 +28,13 @@ type Context = {
 
 interface ShoppingCartContainerProps {
   children: ReactNode;
+  Checkout: FC<{minHeight: number}>;
 }
 
-const ShoppingCartContainer = ({children}: ShoppingCartContainerProps) => {
+const ShoppingCartContainer = ({
+  children,
+  Checkout,
+}: ShoppingCartContainerProps) => {
   const styles = useStyles();
 
   const translateY = useSharedValue(0);
@@ -66,6 +70,7 @@ const ShoppingCartContainer = ({children}: ShoppingCartContainerProps) => {
 
   return (
     <Box flex={1} backgroundColor="secondary">
+      <Checkout minHeight={minHeight} />
       <PanGestureHandler {...{onGestureEvent}}>
         <Animated.View style={[styles.bottomSheet, animatedStyle]}>
           {children}

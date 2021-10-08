@@ -259,3 +259,30 @@ export const shoppingCartItems = [
     price: '$29,99',
   },
 ];
+
+export enum CardType {
+  VISA,
+  MASTERCARD,
+}
+
+export interface CreditCard {
+  id: number;
+  type: CardType;
+  last4Digits: number;
+  expiration: string;
+}
+
+export const creditCards = [
+  {
+    id: 0,
+    type: CardType.VISA,
+    last4Digits: 5467,
+    expiration: '05/24',
+  },
+  {
+    id: 1,
+    type: CardType.MASTERCARD,
+    last4Digits: 2620,
+    expiration: '05/24',
+  },
+];
